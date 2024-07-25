@@ -1,0 +1,26 @@
+txaa-ani-subtitle-2 txaa-split-subtitle-2
+
+h4-title-letter
+
+
+txaafadedown
+txaafaderight
+txaafadeleft
+
+txaapadding0
+
+txaascale2
+
+txaasx0
+
+txaascale0
+
+fd-transition-3
+
+fd-h5-img-down
+
+fd-h5-title-ani-1
+
+fd-delay-500
+
+fd-fade-down-1

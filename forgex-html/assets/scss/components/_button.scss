@@ -1,0 +1,134 @@
+
+/* 
+    button-component-start
+*/
+
+/* 
+    mobile-menu-btn-1-start
+*/
+.fx-menu-btn-1 {
+    width: 80px;
+    height: 80px;
+    flex: 0 0 auto;
+    background: var(--fx-clr-pr-1);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    align-content: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all .5s var(--cube-1);
+
+    span {
+        display: inline-block;
+        flex: 0 0 auto;
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        border-radius: 50%;
+        transition: all .5s var(--cube-1);
+    }
+
+    &:hover {
+        background: var(--fx-clr-sd-1);
+        span {
+            &:nth-child(1) {
+                transform: translate(-5px, -5px);
+            }
+            &:nth-child(2) {
+                transform: translate(0px, -5px);
+            }
+            &:nth-child(3) {
+                transform: translate(5px, -5px);
+            }
+            &:nth-child(4) {
+                transform: translate(-5px, 0px);
+            }
+            &:nth-child(6) {
+                transform: translate(5px, 0px);
+            }
+            &:nth-child(7) {
+                transform: translate(-5px, 5px);
+            }
+            &:nth-child(8) {
+                transform: translate(0px, 5px);
+            }
+            &:nth-child(9) {
+                transform: translate(5px, 5px);
+            }
+        }
+    }
+}
+
+/* 
+    mobile-menu-btn-1-end 
+*/
+
+/* 
+    pr-btn-1-start
+*/
+.fx-pr-btn-1 {
+    display: inline-block;
+    flex: 0 0 auto;
+    font-family: var(--fx-font-pr-1);
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 1;
+    background: var(--fx-clr-pr-1);
+    color: #fff;
+    padding: 19px 27px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all .5s var(--cube-1);
+
+    i {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+/* 
+    pr-btn-1-end
+*/
+/* 
+    search-btn-1-start
+*/
+
+.fx-search-btn-1 {
+    font-family: var(--fx-font-pr-1);
+    text-transform: capitalize;
+    color: rgb(0 0 0 / 40%);
+    font-size: 16px;
+    background: transparent;
+    padding: 0;
+    transition: all .4s var(--cube-1);
+    flex: 0 0 auto;
+
+    i {
+        color: #000;
+        margin-right: 5px;
+        transition: all .4s var(--cube-1);
+    }
+
+    &:hover {
+        color: var(--fx-clr-pr-1);
+        transform: translateX(-3px);
+
+        i {
+            color: var(--fx-clr-pr-1);
+        }
+    }
+}
+
+/* 
+    search-btn-1-end
+*/
+
+
+
+/* 
+    button-component-end
+*/

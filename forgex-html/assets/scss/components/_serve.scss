@@ -1,0 +1,36 @@
+/* 
+    serve-1-start
+*/
+.fx-serve-1 {
+    &-scn-title {
+        max-width: 695px;
+    }
+
+    &-slider {
+        &-item {
+            .item-img {
+                height: 256px;
+                border-radius: 8px;
+                margin-bottom: 24px;
+            }
+            .item-title {
+                font-size: 23px;
+                line-height: 27px;
+                max-width: 230px;
+                transition: all .4s var(--cube-1);
+                &:hover {
+                    color: var(--fx-clr-pr-1);
+                }
+            }
+        }
+
+        .swiper-notification {
+            display: none;
+        }
+    } 
+}
+
+
+/* 
+    serve-1-end
+*/

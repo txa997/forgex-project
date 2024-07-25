@@ -1,0 +1,84 @@
+/* 
+    components-start
+*/
+
+/* 
+    contact-list-start
+*/
+
+.fx-contact-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media #{$xs} {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+    }
+
+    li {
+        font-family: var(--fx-font-pr-1);
+        color: #fff;
+        font-size: 14px;
+        line-height: 2.6;
+        padding-right: 20px;
+        border-right: 1px solid rgb(255 255 255 / 16%);
+        transition: all .5s var(--cube-1);
+
+        @media #{$md,$xs} {
+            border-right: none;
+        }
+
+        i {
+            margin-right: 4px;
+        }
+
+        a {
+            transition: all .5s var(--cube-1);
+
+            &:hover {
+                color: var(--fx-clr-pr-1);
+                transform: translateX(3px);
+            }
+        }
+        
+    }
+}
+
+/* 
+    contact-list-end
+*/
+
+/* 
+    social-list-start
+*/
+.fx-social-icon {
+    display: flex;
+    align-items: center;
+
+    &-btn {
+        font-size: 14px;
+        color: #fff;
+        padding: 2px 15px;
+        flex: 0 0 auto;
+        border-left: 1px solid rgb(255 255 255 / 16%);
+        transition: all .5s var(--cube-1);
+
+        @media #{$md,$xs} {
+            border-left: none;
+        }
+
+        &:hover {
+            background-color: var(--fx-clr-pr-1) ;
+        }
+    }
+}
+
+/* 
+    social-list-end
+*/
+
+/* 
+    components-end
+*/
