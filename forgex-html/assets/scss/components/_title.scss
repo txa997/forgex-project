@@ -28,7 +28,7 @@
     }
 
     &:is(.has-opacity-7) {
-        opacity: 7;
+        opacity: .72;
     }
 }
 
@@ -44,6 +44,10 @@
     margin-bottom: 0;
     opacity: 64%;
     margin-bottom: 20px;
+
+    &:is(.has-clr-white) {
+        color: #fff;
+    }
 }
 
 
@@ -57,25 +61,8 @@
     line-height: 1.088;
     margin-bottom: 0;
 
-}
-
-.fd-scn-title-1 {
-    font-family: var(--fd-font-pr-1);
-    line-height: 1.30;
-    color: #000;
-    text-transform: capitalize;
-    font-weight: 800;
-    font-size: 67px;
-    margin-bottom: 0px;
-
-
-
-    @media #{$xxl} {
-        font-size: 60px;
-    }
-
-    @media #{$xl} {
-        font-size: 50px;
+    &:is(.has-clr-white) {
+        color: #fff;
     }
 
     @media #{$lg} {
@@ -84,15 +71,17 @@
 
     @media #{$md} {
         font-size: 35px;
+        letter-spacing: -1px;
     }
-    
+
     @media #{$xs} {
         font-size: 26px;
+        letter-spacing: 0px;
     }
+
     @media #{$sm} {
         font-size: 30px;
     }
-
 }
 
 

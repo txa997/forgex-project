@@ -1,0 +1,247 @@
+/* 
+    testimonial-1-start
+*/
+
+.fx-testimonial-1 {
+    &-scn-title {
+        max-width: 900px;
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 3.7fr 1fr;
+        gap: 32px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-slider {
+
+
+        &-main {
+            display: grid;
+
+            &-item {
+                display: grid;
+                grid-template-columns: 1fr 2.5fr;
+                gap: 48px;
+
+                @media #{$md} {
+                    gap: 30px;
+                }
+
+                @media #{$xs} {
+                    gap: 30px;
+                    grid-template-columns: 1fr ;
+                }
+
+                @media #{$sm} {
+                    gap: 30px;
+                    grid-template-columns: 1fr 2.5fr;
+                }
+
+                .item-img {
+                    border-radius: 8px;
+
+                    img {
+                        filter: grayscale(1);
+                    }
+                }
+
+                i {
+                    position: absolute;
+                    right: 2px;
+                    top: -22px;
+                    color: #FC5220;
+                    font-size: 130px;
+                    line-height: 1;
+                    mix-blend-mode: plus-lighter;
+                    opacity: .8;
+                }
+
+                .item-comment {
+                    font-size: 23px;
+                    line-height: 1.43;
+                    font-weight: 400;
+                    margin-bottom: 16px;
+
+                    @media #{$lg,$md,$xs} {
+                        font-size: 20px;
+                    }
+                }
+
+                .item-dot {
+                    display: inline-flex;
+                    gap: 10px;
+                    margin-bottom: 41px;
+
+                    span {
+                        display: block;
+                        flex: 0 0 auto;
+                        width: 6px;
+                        height: 6px;
+                        background: var(--fx-clr-pr-1);
+                        border-radius: 50%;
+                        opacity: 0;
+                        transition: 1s;
+
+                        &:nth-child(2) {
+                            transition-delay: 1s;
+                        }
+
+                        &:nth-child(3) {
+                            transition-delay: 2s;
+                        }
+                    }
+                }
+
+                .author-name {
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 2px;
+                    transform: translateY(50px);
+                    opacity: 0;
+                    transition: all .5s var(--cube-1);
+                    transition-delay: .5s;
+                }
+
+                .author-bio {
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    transform: translateY(50px);
+                    opacity: 0;
+                    transition: all .5s var(--cube-1);
+                    transition-delay: .8s;
+                }
+                
+            }
+
+            .swiper-container {
+                .swiper-wrapper {
+                    .swiper-slide {
+                        &:is(.swiper-slide-active) {
+                            .fx-testimonial-1-slider-main-item .item-dot span {
+                                opacity: 1;
+                            }
+                            .fx-testimonial-1-slider-main-item .author-bio ,
+                            .fx-testimonial-1-slider-main-item .author-name {
+                                transform: translateY(0);
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .swiper-notification {
+                display: none;
+            }
+
+        }
+
+        &-preview {
+            display: grid;
+            border-radius: 8px;
+            height: 300px;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: rgb(255 255 255 / 64%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                -webkit-backdrop-filter: blur(16px);
+                backdrop-filter: blur(10px);
+                z-index: 1;
+            }
+
+            &-item {
+                height: 100%;
+                img {
+                    filter: grayscale(1);
+                }
+            }
+
+
+            .swiper-notification {
+                display: none;
+            }
+        }
+
+
+        &-btn {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: #000;
+            opacity: 48%;
+            transition: all .3s var(--cube-1);
+
+            &:hover {
+                color: var(--fx-clr-pr-1);
+                opacity: 1;
+            }
+
+        }
+
+        &-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            span {
+                width: 6px;
+                height: 6px;
+                background: rgb(0 0 0 / 32%);
+                opacity: 1;
+                flex: 0 0 auto;
+                margin: 0 !important;
+                padding: 0;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    border: 1px solid var(--fx-clr-pr-1);
+                    background: transparent;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% , -50%);
+                    opacity: 0;
+                    transition: all .3s var(--cube-1);
+                }
+
+                &:is(.swiper-pagination-bullet-active) {
+                    background: var(--fx-clr-pr-1);
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* 
+    testimonial-1-end
+*/

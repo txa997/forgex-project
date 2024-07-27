@@ -11,7 +11,7 @@
 
 // smoooth scroll activation start
 const lenis = new Lenis({
-	duration: 1.8,	
+	duration: .5,	
 })
 
 
@@ -216,10 +216,15 @@ if($('.fx-serve-1-active').length) {
 		loop: true,
 		spaceBetween: 32,
 		speed: 500,
-		slidesPerView: 3,
+		slidesPerView: 4,
 
 		autoplay: {
 			delay: 3000,
+		},
+
+		navigation: {
+			nextEl: ".fx-serve-1-slider-next",
+			prevEl: ".fx-serve-1-slider-prev",
 		},
 
 		breakpoints: {
@@ -238,13 +243,64 @@ if($('.fx-serve-1-active').length) {
 			1200: {
 				slidesPerView: 3,
 			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 4,
+			},
 		},
 	});
 }
 
+// services-1-slider
+if($('.fx-services-1-active').length) {
+	let slider = new Swiper('.fx-services-1-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 500,
+		slidesPerView: 1,
 
+		autoplay: {
+			delay: 3000,
+		},
 
+		navigation: {
+			nextEl: ".fx-services-1-slider-next",
+			prevEl: ".fx-services-1-slider-prev",
+		},
 
+		pagination: {
+			el: ".fx-services-1-slider-pagination",
+			type: "fraction",
+		},
+
+	});
+}
+
+// testimonial-1-slider
+if($('.fx-testimonial-1-active-1').length) {
+	let slider = new Swiper('.fx-testimonial-1-active-1', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 500,
+		slidesPerView: 1,
+
+		autoplay: {
+			delay: 4000,
+		},
+
+		navigation: {
+			nextEl: ".fx-testimonial-1-slider-next",
+			prevEl: ".fx-testimonial-1-slider-prev",
+		},
+
+		pagination: {
+			el: ".fx-t1-slider-pagination",
+			clickable: true,
+		},
+	});
+}
 
 
 

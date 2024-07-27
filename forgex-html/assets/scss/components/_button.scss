@@ -89,6 +89,13 @@
         background: #000;
         color: #fff;
     }
+
+    &:is(.has-hover-white) {
+        &:hover {
+            background: #fff;
+            color: var(--fx-clr-pr-1);
+        }
+    }
 }
 /* 
     pr-btn-1-end
@@ -125,6 +132,44 @@
 
 /* 
     search-btn-1-end
+*/
+
+/* 
+    playbtn-1-start
+*/
+.fx-play-btn-1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--fx-font-pr-1);
+    text-transform: capitalize;
+    font-weight: 500;
+    color: var(--fx-clr-pr-1);
+    transition: all .4s var(--cube-1);
+
+    i {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 300;
+        transition: .2s 
+    }
+
+    &:hover {
+        color: var(--fx-clr-sd-1);
+        i {
+            transform: translateX(3px);
+        }
+    }
+
+    &:is(.has-hover-white) {
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+/* 
+    playbtn-1-end
 */
 
 
