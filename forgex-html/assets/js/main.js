@@ -81,7 +81,7 @@ glystickyHeader();
   
 
 
-// mobile-menu-start
+// mobile-menu
 jQuery(".mobile-main-navigation li.dropdown").append('<span class="dropdown-btn"><i class="fa-solid fa-angle-right"></i></span>'),
 	jQuery(".mobile-main-navigation li .dropdown-btn").on("click", function () {
 		jQuery(this).hasClass("active")
@@ -93,6 +93,25 @@ jQuery(".mobile-main-navigation li.dropdown").append('<span class="dropdown-btn"
 			jQuery(this).parent().find("> .dropdown-menu").slideToggle());
 });
 
+// footer-menu
+
+var dropdownLinks = document.querySelectorAll('.dropdown-link');
+
+dropdownLinks.forEach(function(link) {
+	link.addEventListener('click', function(event) {
+		event.preventDefault();
+		var dropdown = this.nextElementSibling;
+		if (dropdown.style.display === 'block') {
+			dropdown.style.display = 'none';
+		} else {
+			// Hide all other dropdowns
+			document.querySelectorAll('.has-dropdown').forEach(function(ul) {
+				ul.style.display = 'none';
+			});
+			dropdown.style.display = 'block';
+		}
+	});
+});
 
 // search-popup-start
 $('.search_btn_toggle').on('click', function() {
@@ -208,7 +227,10 @@ mWrap.hover(function () {
 	});
 
 });
-  
+
+/* 
+
+
 
 // serve-1-slider
 if($('.fx-serve-1-active').length) {
@@ -302,14 +324,31 @@ if($('.fx-testimonial-1-active-1').length) {
 	});
 }
 
+*/
 
+
+// swiper( {
+// 	loop: true,
+// 	spaceBetween: 0,
+// 	speed: 500,
+// 	slidesPerView: 1,
+
+// 	autoplay: {
+// 		delay: 4000,
+// 	},
+
+// 	pagination: {
+// 		el: ".fx-t1-slider-pagination",
+// 		clickable: true,
+// 	},
+// });
 
 /*
 	marquee-activiton
 */
 $('.js-marquee-wrapper').marquee({
 	speed: 50,
-	gap: 12,
+	gap: 65,
 	delayBeforeStart: 0,
 	direction: 'left',
 	duplicated: true,
@@ -326,15 +365,8 @@ $(function () {
 })
 
 /* back-to-top */
-var backtotop = $('.scroll-top');
+var backtotop = $('.scroll_top');
 
-$(window).scroll(function() {
-	if ($(window).scrollTop() > 300) {
-	backtotop.addClass('show');
-	} else {
-	backtotop.removeClass('show');
-	}
-});
 
 backtotop.on('click', function(e) {
 	e.preventDefault();
