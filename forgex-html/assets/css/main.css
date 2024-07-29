@@ -1665,7 +1665,6 @@ input:focus::placeholder, textarea:focus::placeholder {
   align-items: center;
   gap: 10px 40px;
   font-family: var(--fx-font-pr-1);
-  text-transform: capitalize;
   color: #000;
   line-height: 1;
   margin-bottom: 0;
@@ -2388,6 +2387,23 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* 
   spilting-wrating-end
 */
+/* 
+  title-ani-css-start
+*/
+.txaa-split-text-2 {
+  text-transform: unset !important;
+}
+.txaa-split-text-2 .split-line div div:nth-child(1) {
+  text-transform: capitalize;
+}
+
+.fx-cube-1 {
+  transition: var(--cube-1);
+}
+
+/* 
+  title-ani-css-end
+*/
 .scroll-top {
   position: fixed;
   right: 20px;
@@ -2761,6 +2777,24 @@ input:focus::placeholder, textarea:focus::placeholder {
   left: 0;
   opacity: 56%;
 }
+.fx-hero-1-slider-item-img img {
+  --_g: 0% / 37% 45% no-repeat linear-gradient(#fff 0 0);
+  --m: left var(--_i,15%) top var(--_g),
+              bottom var(--_i,0%) left var(--_g),
+              top var(--_i,0%) right var(--_g),
+              right var(--_i,8%) bottom var(--_g);
+  -webkit-mask: var(--m);
+  mask: var(--m);
+  transition: all 1s var(--cube-1);
+  transform: translateX(150px);
+  filter: blur(5px);
+}
+.fx-hero-1-slider-item-img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .fx-hero-1-slider-item-content {
   max-width: 515px;
 }
@@ -2785,6 +2819,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #fff;
   font-weight: 600;
   margin-bottom: 30px;
+  transition: all 1s var(--cube-1);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .fx-hero-1-slider-item-title {
@@ -2814,8 +2849,97 @@ input:focus::placeholder, textarea:focus::placeholder {
     line-height: 1;
   }
 }
+.fx-hero-1-slider-item-title .split-line {
+  overflow: hidden;
+}
+.fx-hero-1-slider-item-title .split-line > div {
+  transform: translateY(100%);
+  transition: all 1s var(--cube-1);
+  transition-delay: 0s;
+}
 .fx-hero-1-slider-item-pera {
   margin-bottom: 25px;
+}
+.fx-hero-1-slider-item-pera span {
+  transform: translateY(100%);
+  transition: all 1s var(--cube-1);
+  transition-delay: 0s;
+}
+.fx-hero-1-slider-item-btn span {
+  transform: translateY(100%);
+  transition: all 1s var(--cube-1);
+  transition-delay: 0s;
+}
+.fx-hero-1-slider .swiper-container .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .fx-hero-1-slider-item-img img {
+  --_i: 0%;
+  --_g: 0% / 50.1% 50.1% no-repeat linear-gradient(#fff 0 0);
+  transform: translateX(0px);
+  filter: blur(0px);
+}
+.fx-hero-1-slider .swiper-container .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .fx-hero-1-slider-item-title .split-line > div {
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+.fx-hero-1-slider .swiper-container .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .fx-hero-1-slider-item-pera span {
+  transform: translateY(0);
+  transition-delay: 0.8s;
+}
+.fx-hero-1-slider .swiper-container .swiper-wrapper .swiper-slide:is(.swiper-slide-active) .fx-hero-1-slider-item-btn span {
+  transform: translateY(0);
+  transition-delay: 1s;
+}
+.fx-hero-1-slider .swiper-container .swiper-notification {
+  display: none;
+}
+.fx-hero-1-pagination {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  width: 4px !important;
+  border-radius: 8px;
+  height: 300px;
+}
+.fx-hero-1-pagination-posi {
+  position: absolute;
+  right: 14.5vw;
+  top: 57%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+@media only screen and (min-width: 1600px) and (max-width: 1799px) {
+  .fx-hero-1-pagination-posi {
+    right: 7.5vw;
+  }
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .fx-hero-1-pagination-posi {
+    right: 2.5vw;
+  }
+}
+@media (max-width: 767px) {
+  .fx-hero-1-pagination-posi {
+    right: 2.5vw;
+    display: none;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .fx-hero-1-pagination-posi {
+    right: 2.5vw;
+    display: inline-block;
+  }
+}
+.fx-hero-1-pagination span {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: #fff;
+  margin: 0 !important;
+  padding: 0;
+  transition: all 1s var(--cube-1);
+  opacity: 0;
+}
+.fx-hero-1-pagination span:is(.swiper-pagination-bullet-active) {
+  opacity: 1;
 }
 
 /* 
@@ -3350,6 +3474,23 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-right: 12px;
   margin-left: 12px;
   border-radius: 16px;
+  height: 600px;
+}
+.fx-video-1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.fx-video-1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #021F45;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 30%;
 }
 .fx-video-1-btn {
   position: absolute;

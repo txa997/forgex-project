@@ -35,3 +35,27 @@
 /* 
   spilting-wrating-end
 */
+/* 
+  title-ani-css-start
+*/
+.txaa-split-text-2 {
+	text-transform: unset !important;
+	.split-line {
+		div {
+			div {
+				&:nth-child(1) {
+					text-transform: capitalize;
+                    
+				}
+			}
+		}
+	}
+}
+
+
+.fx-cube-1 {
+	transition: var(--cube-1);
+}
+/* 
+  title-ani-css-end
+*/
