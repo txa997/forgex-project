@@ -126,7 +126,7 @@
             font-family: var(--fx-font-pr-1);
             text-transform: capitalize;
             font-weight: 400;
-            padding-left: 14px;
+            padding-left: 0;
             line-height: 1;
             position: relative;
             z-index: 1;
@@ -148,6 +148,7 @@
 
             &:hover {
                color: var(--fx-clr-pr-1);
+               padding-left: 14px;
                &::after {
                   transform: scale(1);
                }

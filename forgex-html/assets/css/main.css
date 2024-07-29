@@ -1938,6 +1938,26 @@ input:focus::placeholder, textarea:focus::placeholder {
 .fx-social-icon-btn:hover {
   background-color: var(--fx-clr-pr-1);
 }
+.fx-social-icon-btn:nth-child(1):hover {
+  border-color: transparent;
+  background: #1974EC;
+  color: #fff;
+}
+.fx-social-icon-btn:nth-child(2):hover {
+  border-color: transparent;
+  background: #0077B5;
+  color: #fff;
+}
+.fx-social-icon-btn:nth-child(3):hover {
+  border-color: transparent;
+  background: #1C9CEA;
+  color: #fff;
+}
+.fx-social-icon-btn:nth-child(4):hover {
+  border-color: transparent;
+  background: #CE36A6;
+  color: #fff;
+}
 
 /* 
     social-list-end
@@ -4287,7 +4307,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-family: var(--fx-font-pr-1);
   text-transform: capitalize;
   font-weight: 400;
-  padding-left: 14px;
+  padding-left: 0;
   line-height: 1;
   position: relative;
   z-index: 1;
@@ -4308,6 +4328,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .fx-footer-1-menu-2 li a:hover {
   color: var(--fx-clr-pr-1);
+  padding-left: 14px;
 }
 .fx-footer-1-menu-2 li a:hover::after {
   transform: scale(1);
