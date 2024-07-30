@@ -1,26 +1,15 @@
-txaa-ani-subtitle-2 txaa-split-subtitle-2
+txaa-split-text-2
 
-h4-title-letter
+txaa-split-text-2-ani
 
+txaa-split-text-3
+txaa-split-text-3-ani
 
-txaafadedown
-txaafaderight
-txaafadeleft
+txxaslideup
+txxaslideup-item
 
-txaapadding0
+fx-cube-1
 
-txaascale2
+txaaredius
 
-txaasx0
-
-txaascale0
-
-fd-transition-3
-
-fd-h5-img-down
-
-fd-h5-title-ani-1
-
-fd-delay-500
-
-fd-fade-down-1
+txaaslideup

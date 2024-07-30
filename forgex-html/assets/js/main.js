@@ -484,6 +484,46 @@ if($('.fx-testimonial-1-active-1').length) {
 	});
 }
 
+
+// cursor follow
+var mWrap = $(".fx-video-1");
+  
+mWrap.hover(function () {
+
+	var mContent = $(this).find("#magnetic-content");
+	var mArea = $(this).find("#magnetic-area");
+
+	function parallaxIt(e, target, movement = 1) {
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		var boundingRect = mArea[0].getBoundingClientRect();
+		var relX = e.pageX - boundingRect.left;
+		var relY = e.pageY - boundingRect.top;
+
+		gsap.to(mContent, {
+			x: (relX - boundingRect.width / 2) * movement,
+			y: (relY - boundingRect.height / 2 - scrollTop) * movement,
+			duration: 1
+		});
+	}
+
+	function callParallax(e) {
+		parallaxIt(e, mWrap);
+	}
+
+	mArea.mousemove(function (e) {
+		callParallax(e);
+	});
+
+	mArea.mouseleave(function (e) {
+		gsap.to(mContent, {
+			scale: 1,
+			x: 0,
+			y: 0,
+			duration: 1
+		});
+	});
+});
+
 /*
 	marquee-activiton
 */
@@ -496,9 +536,6 @@ $('.js-marquee-wrapper').marquee({
 	pauseOnHover: true,
 	startVisible:true,
 })
-
-
-
 
 // bootstrap-toltip
 $(function () {

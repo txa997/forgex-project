@@ -85,12 +85,62 @@
         margin-left: 10px;
     }
 
+    .text {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        line-height: 1;
+        margin-bottom: -2px;
+
+        &::after {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            display: block;
+            transition: all 0.5s var(--cube-1);
+            position: absolute;
+            content: attr(data-back);
+            transform: translateY(100%);
+        }
+    
+        &::before {
+            top: 0;
+            left: 0;
+            opacity: 1;
+            display: block;
+            transition: 0.5s;
+            position: relative;
+            content: attr(data-front);
+            transform: translateY(0);
+        }
+    }
+
     &:hover {
         background: #000;
         color: #fff;
+
+        .text {
+            &::after {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+            &::before {
+                opacity: 0;
+                transform: translateY(-240%);
+            }
+        }
     }
 
     &:is(.has-hover-white) {
+        .text {
+            &::after {
+                color: var(--fx-clr-pr-1);
+            }
+            &::before {
+                color: #fff;
+            }
+        }
         &:hover {
             background: #fff;
             color: var(--fx-clr-pr-1);
