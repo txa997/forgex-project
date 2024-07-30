@@ -146,6 +146,20 @@
             color: var(--fx-clr-pr-1);
         }
     }
+
+    &:is(.has-hover-border) {
+        border: 2px solid transparent;
+
+        .text {
+            &::after {
+                color: var(--fx-clr-pr-1);
+            }
+        }
+        &:hover {
+            background: transparent;
+            border-color: var(--fx-clr-pr-1);
+        }
+    }
 }
 /* 
     pr-btn-1-end

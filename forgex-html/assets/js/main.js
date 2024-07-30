@@ -38,6 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 		setTimeout(function() {
+
+
+			// home-1-hero
 			if($('.fx-hero-1-active').length) {
 				let slider = new Swiper('.fx-hero-1-active', {
 					loop: true,
@@ -59,6 +62,26 @@ document.addEventListener("DOMContentLoaded", function () {
 			
 				});
 			}
+
+			// home-1-hero
+			if($('.fx-hero-2-active').length) {
+				let slider = new Swiper('.fx-hero-2-active', {
+					loop: true,
+					spaceBetween: 0,
+					speed: 500,
+					autoplay: {
+						delay: 4000000,
+					},
+			
+					pagination: {
+						el: ".fx-hero-2-pagination",
+						clickable: true,
+					  },
+			
+			
+				});
+			}
+
 		}, 500);
 
 	})
@@ -470,6 +493,30 @@ if($('.fx-testimonial-1-active-1').length) {
 
 		autoplay: {
 			delay: 4000,
+		},
+
+		navigation: {
+			nextEl: ".fx-testimonial-1-slider-next",
+			prevEl: ".fx-testimonial-1-slider-prev",
+		},
+
+		pagination: {
+			el: ".fx-t1-slider-pagination",
+			clickable: true,
+		},
+	});
+}
+
+// testimonial-1-slider
+if($('.fx-about-2-active').length) {
+	let slider = new Swiper('.fx-about-2-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 500,
+		slidesPerView: 1,
+
+		autoplay: {
+			delay: 40000000,
 		},
 
 		navigation: {

@@ -63,7 +63,7 @@
         padding: 2px 15px;
         flex: 0 0 auto;
         border-left: 1px solid rgb(255 255 255 / 16%);
-        transition: all .5s var(--cube-1);
+        transition: all .3s var(--cube-1);
 
         @media #{$md,$xs} {
             border-left: none;
