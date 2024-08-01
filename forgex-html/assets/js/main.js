@@ -63,14 +63,14 @@ document.addEventListener("DOMContentLoaded", function () {
 				});
 			}
 
-			// home-1-hero
+			// home-2-hero
 			if($('.fx-hero-2-active').length) {
 				let slider = new Swiper('.fx-hero-2-active', {
 					loop: true,
 					spaceBetween: 0,
 					speed: 500,
 					autoplay: {
-						delay: 4000000,
+						delay: 4000,
 					},
 			
 					pagination: {
@@ -388,7 +388,7 @@ txaascale0.forEach((box, i) => {
 
 	ScrollTrigger.create({
 		trigger: box,
-		start: "top 80%",
+		start: "top 90%",
 		animation: anim,
 		toggleActions: 'play none none reverse',
 		once: false,
@@ -402,6 +402,23 @@ txaaslideup.forEach((box, i) => {
 	const anim = gsap.from(box, 
 		
 	{ yPercent: 10, duration: .5, });
+
+	ScrollTrigger.create({
+		trigger: box,
+		start: "top 80%",
+		animation: anim,
+		toggleActions: 'play none none reverse',
+		once: false,
+		markers: false,
+
+	});
+});
+
+const txaaslideright = gsap.utils.toArray('.txaaslideright');
+txaaslideright.forEach((box, i) => {
+	const anim = gsap.from(box, 
+		
+	{ xPercent: 100, duration: .5, });
 
 	ScrollTrigger.create({
 		trigger: box,
@@ -507,9 +524,99 @@ if($('.fx-testimonial-1-active-1').length) {
 	});
 }
 
-// testimonial-1-slider
+// about-2-slider
 if($('.fx-about-2-active').length) {
 	let slider = new Swiper('.fx-about-2-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 500,
+		slidesPerView: 1,
+
+		autoplay: {
+			delay: 4000,
+		},
+
+		navigation: {
+			nextEl: ".fx-a1-slider-next",
+			prevEl: ".fx-a1-slider-prev",
+		},
+
+		pagination: {
+			el: ".fx-a2-pagination",
+			clickable: true,
+		},
+	});
+}
+
+// core-1-slider
+if($('.fx-core-1-active').length) {
+	let slider = new Swiper('.fx-core-1-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 500,
+		slidesPerView: 1,
+
+		autoplay: {
+			delay: 4000,
+		},
+
+		navigation: {
+			nextEl: ".fx-core1-slider-next",
+			prevEl: ".fx-core1-slider-prev",
+		},
+
+		pagination: {
+			el: ".fx-core1-pagination",
+			clickable: true,
+		},
+	});
+}
+
+// team-1-slider
+if($('.fx-t1-active').length) {
+	let slider = new Swiper('.fx-t1-active', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+		slidesPerView: 4,
+
+		autoplay: {
+			delay: 4000,
+		},
+
+		navigation: {
+			nextEl: ".fx-t1-slider-next",
+			prevEl: ".fx-t1-slider-prev",
+		},
+
+		pagination: {
+			el: ".fx-t1-pagination",
+			clickable: true,
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+		},
+	});
+}
+
+// project-2-slider
+if($('.fx-p2-active').length) {
+	let slider = new Swiper('.fx-p2-active', {
 		loop: true,
 		spaceBetween: 0,
 		speed: 500,
@@ -520,14 +627,52 @@ if($('.fx-about-2-active').length) {
 		},
 
 		navigation: {
-			nextEl: ".fx-testimonial-1-slider-next",
-			prevEl: ".fx-testimonial-1-slider-prev",
+			nextEl: ".fx-p2-slider-next",
+			prevEl: ".fx-p2-slider-prev",
 		},
 
-		pagination: {
-			el: ".fx-t1-slider-pagination",
-			clickable: true,
+		scrollbar: {
+			el: ".fx-p2-scrollbar",
 		},
+
+	});
+}
+
+// client-1-slider
+if($('.fx-c1-active').length) {
+	let slider = new Swiper('.fx-c1-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 500,
+		slidesPerView: 1,
+
+		autoplay: {
+			delay: 40000000,
+		},
+
+		navigation: {
+			nextEl: ".fx-c1-slider-next",
+			prevEl: ".fx-c1-slider-prev",
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 3,
+			},
+			768: {
+				slidesPerView: 4,
+			},
+			992: {
+				slidesPerView: 5,
+			},
+			1200: {
+				slidesPerView: 6,
+			},
+		},
+
 	});
 }
 

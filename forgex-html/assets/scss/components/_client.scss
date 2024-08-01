@@ -1,0 +1,91 @@
+/* 
+    client-1-start
+*/
+.fx-client-1-slider {
+    padding-left: 70px;
+    padding-right: 70px;
+
+    &-item {
+        text-align: center;
+        span {
+            &:first-child {
+                position: absolute;
+                top: 0;
+                transform: translateY(-100%) rotate(-20deg);
+                transform-origin: left bottom;
+                transition: all .5s var(--cube-1);
+            }
+            &:last-child {
+                transform-origin: right bottom;
+                transition: all .5s var(--cube-1);
+                opacity: 40%;
+            }
+        }
+    
+        &:hover {
+            span {
+                &:first-child {
+                    transform: translateY(0%) rotate(0deg);
+                }
+                &:last-child {
+                    transform: translateY(100%) rotate(-20deg);
+                }
+            }
+        }
+    }
+
+    .swiper-container {
+        .swiper-notification {
+            display: none;
+        }
+    }
+
+    &-btn {
+        &-left {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+
+            i {
+                color: #000;
+
+                &:last-child {
+                    color: var(--fx-clr-pr-1);
+                }
+            }
+
+            &:hover {
+                background: #fff;
+            }
+        }
+        &-right {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+
+            i {
+                color: #000;
+
+                &:last-child {
+                    color: var(--fx-clr-pr-1);
+                }
+            }
+
+            &:hover {
+                background: #fff;
+            }
+        }
+
+
+    }
+}
+
+/* 
+    client-1-end
+*/
