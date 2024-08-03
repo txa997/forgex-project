@@ -106,7 +106,18 @@
     }
 }
 
-
+.fx-cta-1-form {
+    &:is(.has-cta-2) {
+        .fx-cta-1-form-input:focus {
+            border-color: #021F45;
+        }
+        .fx-cta-1-form-btn {
+            &:hover {
+                color: #021F45;
+            }
+        }
+    }
+}
 /* 
     cta-1-end
 */

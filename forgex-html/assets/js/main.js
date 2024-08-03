@@ -365,8 +365,8 @@ const txaaredius = gsap.utils.toArray('.txaaredius');
 txaaredius.forEach((box, i) => {
 	const anim = gsap.fromTo(box, 
 		
-	{ borderRadius: "0", marginLeft: "0", marginRight: "0", duration: 1, }, 
-	{ borderRadius: "16px" , marginLeft: "12px",  marginRight: "12px", duration: 1, });
+	{ borderRadius: "0", marginLeft: "0", marginRight: "0", duration: .5, }, 
+	{ borderRadius: "16px" , marginLeft: "12px",  marginRight: "12px", duration: .5, });
 
 	ScrollTrigger.create({
 		trigger: box,
@@ -507,6 +507,7 @@ if($('.fx-testimonial-1-active-1').length) {
 		spaceBetween: 0,
 		speed: 500,
 		slidesPerView: 1,
+		allowTouchMove: false,
 
 		autoplay: {
 			delay: 4000,
@@ -621,9 +622,10 @@ if($('.fx-p2-active').length) {
 		spaceBetween: 0,
 		speed: 500,
 		slidesPerView: 1,
+		allowTouchMove: false,
 
 		autoplay: {
-			delay: 40000000,
+			delay: 4000,
 		},
 
 		navigation: {
@@ -647,7 +649,7 @@ if($('.fx-c1-active').length) {
 		slidesPerView: 1,
 
 		autoplay: {
-			delay: 40000000,
+			delay: 4000,
 		},
 
 		navigation: {
@@ -671,6 +673,91 @@ if($('.fx-c1-active').length) {
 			1200: {
 				slidesPerView: 6,
 			},
+		},
+
+	});
+}
+
+// testimonial-1-slider
+if($('.fx-t2-active').length) {
+	let slider = new Swiper('.fx-t2-active', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+		slidesPerView: 1,
+
+		autoplay: {
+			delay: 4000,
+		},
+		pagination: {
+			el: ".fx-ts2-pagination",
+			clickable: true,
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 2,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+			1600: {
+				slidesPerView: 4,
+			},
+		},
+
+	});
+}
+
+// blog-2-slider
+if($('.fx-b2-active').length) {
+	let slider = new Swiper('.fx-b2-active', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+		slidesPerView: 1,
+
+		autoplay: {
+			delay: 4000,
+		},
+
+		navigation: {
+			nextEl: ".fx-b2-slider-next",
+			prevEl: ".fx-b2-slider-prev",
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 3,
+			},
+
 		},
 
 	});

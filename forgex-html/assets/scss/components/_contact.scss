@@ -117,10 +117,19 @@
     
 }
 
-
-
-
-
 /* 
     contact-us-1-end
+*/
+
+/* 
+    contact-us-2-start
+*/
+.fx-contact-us-1-info-box {
+
+    &:is(.has-contact-us-2) {
+        background: #021F45;
+    }  
+}
+/* 
+    contact-us-2-end
 */
