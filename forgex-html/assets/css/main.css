@@ -4050,6 +4050,44 @@ input:focus::placeholder, textarea:focus::placeholder {
     font-size: 30px;
   }
 }
+.fx-about-2-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 384px;
+  width: 100%;
+  position: absolute;
+  top: 115px;
+  left: 0;
+  z-index: 2;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fx-about-2-tags {
+    top: 55px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .fx-about-2-tags {
+    position: unset;
+    padding-top: 50px;
+  }
+}
+.fx-about-2-tags .tags {
+  background: #FEEDE8;
+  border: 2px solid #FECBBC;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  padding: 8px 10px;
+  flex: 0 0 auto;
+  transition: all 0.4s var(--cube-1);
+}
+.fx-about-2-tags .tags:hover {
+  background: var(--fx-clr-pr-1);
+  color: #fff;
+  border-color: transparent;
+}
 
 /* 
     about-2-end

@@ -369,6 +369,48 @@
         }
     }
     
+    &-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        max-width: 384px;
+        width: 100%;
+        position: absolute;
+        top: 115px;
+        left: 0;
+        z-index: 2;
+
+        @media #{$lg} {
+            top: 55px;
+        }
+
+        @media #{$md,$xs} {
+            position: unset;
+            padding-top: 50px;
+        }
+
+        .tags{
+            background: #FEEDE8;
+            border: 2px solid #FECBBC;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1;
+            font-weight: 500;
+            padding: 8px 10px;
+            flex: 0 0 auto;
+
+
+            transition: all .4s var(--cube-1);
+
+            &:hover {
+                background: var(--fx-clr-pr-1);
+                color: #fff;
+                border-color: transparent;
+            }
+        }
+        
+    }
+    
 }
 
 /* 
