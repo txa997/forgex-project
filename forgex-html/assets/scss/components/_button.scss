@@ -160,6 +160,26 @@
             border-color: var(--fx-clr-pr-1);
         }
     }
+
+    &:is(.has-white-bg) {
+        background: #fff;
+        border: 2px solid transparent;
+        padding: 17px 27px;
+
+        .text {
+            &::before {
+                color: var(--fx-clr-pr-1);
+            }
+            &::after {
+                color: #fff;
+            }
+        }
+
+        &:hover {
+            background: transparent;
+            border-color: #fff;
+        }
+    }
 }
 /* 
     pr-btn-1-end

@@ -82,6 +82,29 @@ document.addEventListener("DOMContentLoaded", function () {
 				});
 			}
 
+			// home-3-hero
+			if($('.fx-hero-3-active').length) {
+				let slider = new Swiper('.fx-hero-3-active', {
+					loop: true,
+					spaceBetween: 0,
+					speed: 500,
+					autoplay: {
+						delay: 4000000,
+					},
+			
+					pagination: {
+						el: ".fx-hero-3-pagination",
+						clickable: true,
+					},
+			
+					navigation: {
+						nextEl: ".fx-h3-slider-next",
+						prevEl: ".fx-h3-slider-prev",
+					},
+			
+				});
+			}
+
 		}, 500);
 
 	})
