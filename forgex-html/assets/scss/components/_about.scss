@@ -416,3 +416,86 @@
 /* 
     about-2-end
 */
+
+/* 
+    about-3-start
+*/
+.fx-about-3 {
+    &-area {
+        position: relative;
+
+        @media #{$md,$xs} {
+            padding-top: 100px;
+        }
+
+    }
+
+    &-bg {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        height: 100%;
+    }
+
+    &-scn-title {
+        display: grid;
+        grid-template-columns: 1.3fr 1fr 0.7fr;
+        gap: 38px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        .left {
+            padding-top: 135px;
+
+            @media #{$md,$xs} {
+                padding-top: 0px;
+            }
+        }
+
+        .meddle {
+            padding-top: 190px;
+            @media #{$md,$xs} {
+                padding-top: 0px;
+            }
+        }
+     
+        .scn-disc {
+            margin-bottom: 24px;
+        }
+    }
+
+    &-quality-height {
+        height: 605px;
+        position: relative;
+        z-index: 2;
+        @media #{$md,$xs} {
+            height: 235px;
+        }
+    }
+
+    &-quality {
+        width: 170px;
+        height: 100%;
+        background: var(--fx-clr-sd-2);
+        border-radius: 16px 16px 100px 100px;
+        display: flex;
+        align-items: end;
+
+        .icon {
+            animation: fx-rotated 10s linear infinite;
+        }
+    }
+}
+
+
+/* 
+    about-3-end
+*/

@@ -579,3 +579,97 @@
 /* 
     core-1-end
 */
+
+/* 
+    services-3-start
+*/
+.fx-services-3 {
+
+    &-bg {
+        height: 700px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: -1;
+    }
+
+    &-scn-title {
+        display: flex;
+        align-items: end;
+        gap: 15px;
+        justify-content: space-between;
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+        }
+
+        .scn-disc {
+            max-width: 384px;
+        }
+    }
+
+    &-slider {
+        margin-left: -150px;
+        margin-right: -150px;
+        margin-bottom: 38px;
+
+        @media #{$xxl} {
+            margin-left: -200px;
+            margin-right: -200px;
+        }
+
+        @media #{$md,$xs} {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        &-item {
+            height: 320px;
+            border-radius: 16px;
+
+            .item-title {
+                position: absolute;
+                bottom: 12px;
+                text-align: center;
+                left: 0;
+                width: 100%;
+                font-size: 32px;
+                color: var(--fx-clr-sd-2);
+                transition: all .4s var(--cube-1);
+                padding: 0 10px;
+                z-index: 1;
+
+                @media #{$md,$xs} {
+                    font-size: 26px;
+                }
+
+                &:hover {
+                    color: var(--fx-clr-pr-1);
+                    transform: translateX(3px);
+                }
+            }
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 160px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%);
+            }
+
+        }
+
+        .swiper-container {
+            .swiper-notification {
+                display: none;
+            }
+        }
+    }
+}
+/* 
+    services-3-end
+*/

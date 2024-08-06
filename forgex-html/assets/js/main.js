@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					spaceBetween: 0,
 					speed: 500,
 					autoplay: {
-						delay: 4000,
+						delay: 40000000,
 					},
 			
 					pagination: {
@@ -383,6 +383,25 @@ gsap.utils.toArray(".txxaslideup").forEach(function(container) {
 });
 
 
+gsap.utils.toArray(".txaaimgpllx").forEach(function(container) {
+    let image = container.querySelector("img");
+  
+    let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+		  start: "top 90%",
+		  end: "top 40%",
+          scrub: 3,
+          pin: false,
+		  markers: false,
+        },
+      }); 
+      tl.from(image, {
+        yPercent: -30,
+      }).to(image, {
+        yPercent: 0,
+      }); 
+});
 
 const txaaredius = gsap.utils.toArray('.txaaredius');
 txaaredius.forEach((box, i) => {
@@ -454,6 +473,23 @@ txaaslideright.forEach((box, i) => {
 	});
 });
 
+
+// about-3
+var fxa3 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: fxa3,
+	  trigger: '.fx-about-3-quality',
+	  start: "top 80%",
+	  end: "top 20%",
+	  scrub: 2,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+fxa3.from(".fx-about-3-quality" , { height: 200,  duration:1 })
+		 
 
 // serve-1-slider
 if($('.fx-serve-1-active').length) {
@@ -779,6 +815,48 @@ if($('.fx-b2-active').length) {
 			},
 			1400: {
 				slidesPerView: 3,
+			},
+
+		},
+
+	});
+}
+
+
+// services-3-slider
+if($('.fx-s3-active').length) {
+	let slider = new Swiper('.fx-s3-active', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+		slidesPerView: 6,
+
+		autoplay: {
+			delay: 4000,
+		},
+
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			992: {
+				slidesPerView: 4,
+			},
+			1200: {
+				slidesPerView: 5,
+			},
+			1400: {
+				slidesPerView: 6,
+			},
+			1600: {
+				slidesPerView: 7,
 			},
 
 		},
