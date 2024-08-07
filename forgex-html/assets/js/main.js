@@ -684,7 +684,7 @@ if($('.fx-p2-active').length) {
 		allowTouchMove: false,
 
 		autoplay: {
-			delay: 4000,
+			delay: 400000000,
 		},
 
 		navigation: {

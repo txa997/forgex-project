@@ -6,7 +6,6 @@
         border-radius: 16px;
         margin-left: 16px;
         margin-right: 16px;
-        background: #021F45;
     }
 
 
@@ -15,8 +14,191 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+
+    &-tabs {
+        &-btn {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &-line {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                opacity: 12%;
+            }
+
+            li {
+                button {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #fff;
+                    font-size: 32px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    padding: 20px 40px;
+                    position: relative;
+                    z-index: 1;
+                    opacity: 48%;
+                    transition: all .3s var(--cube-1);
+
+                    @media #{$lg,$md,$xs} {
+                        font-size: 26px;
+                        padding: 15px 30px;
+                    }
+                    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: auto;
+                        right: 0;
+                        width: 0%;
+                        height: 2px;
+                        background: #fff;
+                        transition: all .5s var(--cube-1);
+
+                    }
+
+                    .icon {
+                        width: 44px;
+                        height: 50px;
+
+                        @media #{$lg,$md,$xs} {
+                            width: 32px;
+                            height: 40px;
+                        }
+                    }
+
+                    &:hover {
+                        opacity: 100%;
+                        color: #fff;
+                    }
+
+                    &:is(.active ) {
+                        opacity: 100%;
+                        color: #fff;
+                        &::after {
+                            width: 100%;
+                            left: 0;
+                            right: auto;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &-pane {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 64px;
+            align-items: end;
+
+            @media #{$md} {
+                gap: 25px;
+            }
+
+            @media #{$xs} {
+                gap: 30px;
+                grid-template-columns: 1fr;
+            }
+
+            .pane-img {
+                height: 592px;
+                clip-path: polygon( 100% 2.703%,100% 2.703%,99.965% 2.264%,99.862% 1.848%,99.698% 1.461%,99.479% 1.107%,99.208% 0.792%,98.894% 0.521%,98.539% 0.302%,98.152% 0.138%,97.736% 0.035%,97.297% 0%,35.98% 0%,35.98% 0%,35.541% 0.035%,35.125% 0.138%,34.738% 0.302%,34.384% 0.521%,34.069% 0.792%,33.798% 1.107%,33.579% 1.461%,33.415% 1.848%,33.312% 2.264%,33.277% 2.703%,33.277% 6.757%,33.277% 6.757%,33.206% 7.634%,33.001% 8.465%,32.674% 9.241%,32.234% 9.949%,31.694% 10.579%,31.064% 11.119%,30.356% 11.559%,29.58% 11.887%,28.748% 12.091%,27.872% 12.162%,2.703% 12.162%,2.703% 12.162%,2.264% 12.198%,1.848% 12.3%,1.461% 12.464%,1.107% 12.684%,0.792% 12.954%,0.521% 13.269%,0.302% 13.623%,0.138% 14.011%,0.035% 14.426%,0% 14.865%,0% 97.297%,0% 97.297%,0.035% 97.736%,0.138% 98.152%,0.302% 98.539%,0.521% 98.894%,0.792% 99.208%,1.107% 99.479%,1.461% 99.698%,1.848% 99.862%,2.264% 99.965%,2.703% 100%,97.297% 100%,97.297% 100%,97.736% 99.965%,98.152% 99.862%,98.539% 99.698%,98.894% 99.479%,99.208% 99.208%,99.479% 98.894%,99.698% 98.539%,99.862% 98.152%,99.965% 97.736%,100% 97.297%,100% 2.703% );
+
+                @media #{$md} {
+                    height: 535px;
+                }
+
+                @media #{$xs} {
+                    height: 300px;
+                }
+
+            }
+
+
+            .subtitle-flex {
+                display: flex;
+                gap: 10px 40px;
+                flex-wrap: wrap;
+                margin-bottom: 25px;
+
+                .fx-subtitle-1 {
+                    color: #fff;
+                    margin-bottom: 0;
+                }
+
+                .fx-hero-2-slider-item-number {
+                    margin-bottom: 0;
+                }
+            }
+
+            .pane-title {
+                font-size: 64px;
+                line-height: .80;
+                max-width: 384px;
+                margin-bottom: 24px;
+
+                @media #{$lg,$md} {
+                    font-size: 55px;
+                }
+
+                @media #{$xs} {
+                    font-size: 45px;
+                }
+
+                .split-line {
+                    overflow: hidden;
+                    padding-top: 3px;
+                    margin-bottom: -3px;
+                    > div {
+                        transform: translateY(105%);
+                        transition: all 1s var(--cube-1);
+                        transition-delay: .0s;
+                    } 
+                }
+            }
+
+            .pane-disc {
+                opacity: 80%;
+                margin-bottom: 37px;
+            }
+
+            .item-slide-up {
+                transform: translateY(100%);
+                transition: all 1s var(--cube-1);
+                transition-delay: .0s;
+            }
+        }
+
+        &-content {
+            .tab-pane {
+                &:is(.show) {
+                    .fx-process-1-tabs-pane .pane-title .split-line > div {
+                        transform: translateY(0%);
+                        transition-delay: .2s;
+                    }
+
+                    .fx-process-1-tabs-pane .item-slide-up {
+                        transform: translateY(0%);
+                        transition-delay: .4s;
+                    }
+                }
+            } 
+        }
+    }
     
 }
+
+
 /* 
     process-1-end
 */

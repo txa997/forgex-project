@@ -220,3 +220,57 @@
 /* 
     team-1-end
 */
+
+/* 
+    team-3-start
+*/
+.fx-team-1-slider {
+    &:is(.has-team-3) {
+        .fx-team-1-slider-item .item-img {
+            height: 405px;
+        }
+
+        .fx-slider-btn-1-item {
+
+            i:last-child {
+                color: #fff;
+            }
+            &:hover {
+                background: #000;
+                
+            }
+        }
+
+        .fx-slider-pagi-1 {
+            span:is(.swiper-pagination-bullet-active) {
+                background: #000;
+                &::after {
+                    border-color: #000;
+                }
+            }
+        }
+    }
+}
+
+.fx-team-1-content {
+    &:is(.has-team-3) {
+        .t1-btn {
+            color: #000;
+
+            &::after {
+                background: #000;
+            }
+
+            &:hover {
+                color: var(--fx-clr-pr-1);
+
+                &::after {
+                    background-color: var(--fx-clr-pr-1);
+                }
+            }
+        }
+    }
+}
+/* 
+    team-3-end
+*/
