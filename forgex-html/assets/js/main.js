@@ -105,6 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
 				});
 			}
 
+			// breadcrumb
+			var breadcrumb = gsap.timeline();
+			breadcrumb.to(".breadcrumb-title .split-line div" , { yPercent: -100, delay: -.5, })
+			breadcrumb.to(".breadcrumb-slideup" , { yPercent: -100, })
+
 		}, 500);
 
 	})
