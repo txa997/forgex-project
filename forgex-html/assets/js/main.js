@@ -443,7 +443,7 @@ const txaaslideup = gsap.utils.toArray('.txaaslideup');
 txaaslideup.forEach((box, i) => {
 	const anim = gsap.from(box, 
 		
-	{ yPercent: 10, duration: .5, });
+	{ yPercent: 20, duration: .5, });
 
 	ScrollTrigger.create({
 		trigger: box,
@@ -859,6 +859,20 @@ if($('.fx-s3-active').length) {
 				slidesPerView: 7,
 			},
 
+		},
+
+	});
+}
+
+// services-3-slider
+if($('.fx-t3-active').length) {
+	let slider = new Swiper('.fx-t3-active', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 500,
+
+		autoplay: {
+			delay: 4000,
 		},
 
 	});

@@ -88,7 +88,7 @@
                 line-height: 1.2;
 
                 &:not(:last-child) {
-                    margin-bottom: 8px;
+                    margin-bottom: 12px;
                 }
 
                 i {
@@ -132,4 +132,40 @@
 }
 /* 
     contact-us-2-end
+*/
+/* 
+    contact-us-3-start
+*/
+.fx-contact-us-1-info-box {
+    &:is(.has-contact-us-3) {
+        .box-title {
+            color: #000;
+        }
+        .address {
+            color: #000;
+        }
+
+        &:nth-child(2) {
+            .box-title {
+                color: #fff;
+            }
+
+            .info-list li {
+                color: #fff;
+
+                i {
+                    color: var(--fx-clr-sd-2);
+                }
+
+                a {
+                    &:hover {
+                        color: var(--fx-clr-sd-2);
+                    }
+                }
+            }
+        }
+    }
+}
+/* 
+    contact-us-3-end
 */

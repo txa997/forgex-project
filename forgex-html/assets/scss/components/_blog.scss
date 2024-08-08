@@ -250,3 +250,40 @@
 /* 
     blog-2-end
 */
+
+/* 
+    blog-3-start
+*/
+
+.fx-blog-3-area {
+    background-position: bottom;
+}
+.fx-blog-1-item-single {
+    &:is(.has-blog-2 ) {
+        &:is(.has-blog-3) {
+
+            img {
+                filter: grayscale(1);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(2, 0, 36, 0) 0%, rgb(255 221 21) 100%);
+                mix-blend-mode: color;
+                z-index: 1;
+            }
+
+
+        }
+    }
+}
+
+
+/* 
+    blog-3-end
+*/
