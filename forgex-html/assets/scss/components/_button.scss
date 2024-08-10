@@ -180,6 +180,23 @@
             border-color: #fff;
         }
     }
+
+    &:is(.has-clip) {
+        border-radius: 0;
+        padding: 19px 31px;
+        clip-path: polygon(10% 0, 100% 0, 100% 65%, 90% 100%, 0 100%, 0 0);
+
+        .text {
+            &::after {
+                color: var(--fx-clr-pr-1);
+            }
+        }
+
+        &:hover {
+            background: #fff;
+            clip-path: polygon(10% 0, 100% 0, 100% 65%, 90% 100%, 0 100%, 0 35%);
+        }
+    }
 }
 /* 
     pr-btn-1-end

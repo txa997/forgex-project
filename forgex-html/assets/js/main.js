@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					pagination: {
 						el: ".fx-hero-1-pagination",
 						clickable: true,
-					  },
+					},
 			
 			
 				});
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					spaceBetween: 0,
 					speed: 500,
 					autoplay: {
-						delay: 40000000,
+						delay: 4000,
 					},
 			
 					pagination: {
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					spaceBetween: 0,
 					speed: 500,
 					autoplay: {
-						delay: 4000000,
+						delay: 4000,
 					},
 			
 					pagination: {
@@ -102,6 +102,26 @@ document.addEventListener("DOMContentLoaded", function () {
 						prevEl: ".fx-h3-slider-prev",
 					},
 			
+				});
+			}
+
+			// home-4-hero
+			if($('.fx-hero-4-active').length) {
+				let slider = new Swiper('.fx-hero-4-active', {
+					loop: true,
+					spaceBetween: 0,
+					speed: 500,
+					autoplay: {
+						delay: 4000,
+					},
+
+			
+					pagination: {
+						el: ".fx-hero-4-pagination",
+						clickable: true,
+					},
+			
+
 				});
 			}
 
@@ -496,6 +516,22 @@ var fxa3 = gsap.timeline({
 fxa3.from(".fx-about-3-quality" , { height: 200,  duration:1 })
 		 
 
+// solution-4
+var fxa3 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: fxa3,
+	  trigger: '[fx-so4-tri]',
+	  start: "top 80%",
+	  end: "top 10%",
+	  scrub: 2,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+fxa3.from("[fx-so4-tri-item]" , { xPercent: 100, yPercent: -100 })
+	
 // serve-1-slider
 if($('.fx-serve-1-active').length) {
 	let slider = new Swiper('.fx-serve-1-active', {
@@ -689,7 +725,7 @@ if($('.fx-p2-active').length) {
 		allowTouchMove: false,
 
 		autoplay: {
-			delay: 400000000,
+			delay: 4000,
 		},
 
 		navigation: {

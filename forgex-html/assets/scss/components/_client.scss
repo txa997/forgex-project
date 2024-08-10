@@ -89,3 +89,25 @@
 /* 
     client-1-end
 */
+
+/* 
+    client-4-start
+*/
+.fx-client-4 {
+    &-title {
+        font-size: 23px;
+        margin-bottom: 44px;
+
+        @media #{$xs} {
+            font-size: 20px;
+        }
+
+        .has-clr {
+            color: var(--fx-clr-pr-1);
+        }
+    }
+}
+
+/* 
+    client-4-end
+*/
