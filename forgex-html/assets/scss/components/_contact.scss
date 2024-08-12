@@ -169,3 +169,18 @@
 /* 
     contact-us-3-end
 */
+/* 
+    contact-us-4-start
+*/
+.fx-contact-us-4 {
+    &:is(.fx-contact-us-1-img ) {
+        border-radius: 0;
+    }
+    &:is(.fx-contact-us-1-content ) {
+        border-radius: 0;
+    }
+}
+
+/* 
+    contact-us-4-end
+*/

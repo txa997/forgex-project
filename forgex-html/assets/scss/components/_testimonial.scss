@@ -461,3 +461,33 @@
 /* 
     testimonial-3-end
 */
+
+/* 
+    testimonial-4-start
+*/
+.fx-testimonial-4 {
+    &-scn-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(100% - 60px);
+        z-index: -1;
+        height: 100%;
+        clip-path: polygon(0 0, 95% 0, 100% 10%, 100% 100%, 0 100%);
+
+        @media #{$xs} {
+            width: calc(100% - 10px);
+        }
+    }
+}
+
+.fx-testimonial-2-slider {
+    &:is(.has-testimonial-4) {
+        .fx-testimonial-2-slider-item {
+            border-radius: 0;
+        }
+    }
+}
+/* 
+    testimonial-4-end
+*/

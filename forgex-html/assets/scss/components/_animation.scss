@@ -1,9 +1,7 @@
-
-
-
 /* 
-  spilting-wrating-start
+	animation-component-start
 */
+
 .splitting.animated .char {
   -webkit-animation: fadeInUp 0.4s cubic-bezier(0.3, 0, 0.7, 1) both;
   animation: fadeInUp 0.4s cubic-bezier(0.3, 0, 0.7, 1) both;
@@ -59,9 +57,19 @@
 		transform: rotate(360deg);
 	}
 }
-/* 
-  spilting-wrating-end
-*/
+
+@keyframes fx-scaling {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+
+}
+
+
 /* 
   title-ani-css-start
 */
@@ -109,4 +117,9 @@
 }
 /* 
   title-ani-css-end
+*/
+
+
+/* 
+	animation-component-start
 */

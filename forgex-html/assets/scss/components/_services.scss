@@ -673,3 +673,131 @@
 /* 
     services-3-end
 */
+/* 
+    services-4-start
+*/
+.fx-services-4 {
+
+
+    &-bg {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: calc(100% - 60px);
+        height: 100%;
+        z-index: -1;
+        clip-path: polygon(4.5% 0, 100% 0, 100% 94%, 95.5% 100%, 0 100%, 0 6%);
+
+        @media #{$xl,$lg,$md} {
+            width: calc(100% - 10px);
+        }
+
+        @media #{$xs} {
+            width: calc(100% - 5px);
+        }
+
+        @media #{$sm} {
+            width: calc(100% - 10px);
+        }
+    }
+
+    &-scn-title {
+        max-width: 800px;
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &-card {
+        padding-bottom: 34px;
+        position: relative;
+        z-index: 1;
+
+        .card-title {
+            font-size: 32px;
+            line-height: .94;
+            color: #fff;
+            opacity: 64%;
+            max-width: 312px;
+            transition: all .4s var(--cube-1);
+
+            @media #{$xl,$lg} {
+                font-size: 28px;
+            }
+
+            @media #{$md,$xs} {
+                font-size: 24px;
+            }
+
+            &:hover {
+                color: var(--fx-clr-pr-1);
+                transform: translateX(3px);
+                opacity: 100%;
+            }
+        }
+
+        .card-img {
+            height: 384px;
+            clip-path: polygon(100% 0, 100% 83%, 83% 100%, 0 100%, 0 0);
+            margin-bottom: 30px;
+            filter: grayscale(1);
+            transition: all .4s var(--cube-1);
+
+            @media #{$lg} {
+                height: 315px;
+            }
+
+            @media #{$xs} {
+                height: 300px;
+            }
+
+            @media #{$sm} {
+                height: 234px;
+            }
+        }
+
+        .shape {
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+            width: 100%;
+            left: 0;
+
+            svg * {
+                transition: all .4s var(--cube-1);
+            }
+        }
+
+        &:hover {
+            .card-img {
+                filter: grayscale(0);
+            }
+
+            .shape {
+                svg * {
+                    fill: var(--fx-clr-pr-1);
+                    opacity: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* 
+    services-4-end
+*/

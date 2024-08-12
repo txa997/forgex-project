@@ -407,6 +407,54 @@ gsap.utils.toArray(".txxaslideup").forEach(function(container) {
 
 });
 
+gsap.utils.toArray(".txxaslidedown").forEach(function(container) {
+    let image = container.querySelector(".txxaslidedown-item");
+  
+    let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+		  start: "top 90%",
+		  toggleActions: 'play none none reverse',
+		  markers: false,
+		  stagger: 0.3,
+        },
+      }); 
+
+      tl.from(image, {
+        yPercent: -100,
+		duration: .5,
+		stagger: 0.3,
+      }).to(image, {
+		yPercent: 0,
+		duration: .5,
+		stagger: 0.3,
+      }); 
+
+});
+
+gsap.utils.toArray(".txxaimgdown").forEach(function(container) {
+    let image = container.querySelector(".txxaimgdown-item");
+  
+    let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container,
+		  start: "top 90%",
+		  end: "top 0%",
+		  toggleActions: 'play none none reverse',
+		  markers: false,
+		  scrub: 2,
+		  stagger: 0.3,
+        },
+      }); 
+
+      tl.from(image, {
+        yPercent: -20,
+		duration: .5,
+		stagger: 0.3,
+      }); 
+
+});
+
 
 gsap.utils.toArray(".txaaimgpllx").forEach(function(container) {
     let image = container.querySelector("img");
@@ -715,6 +763,47 @@ if($('.fx-t1-active').length) {
 	});
 }
 
+// team-2-slider
+if($('.fx-t4-active').length) {
+	let slider = new Swiper('.fx-t4-active', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+		slidesPerView: 4,
+
+		autoplay: {
+			delay: 40000000,
+		},
+
+
+		pagination: {
+			el: ".fx-t4-pagination",
+			clickable: true,
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+			1400: {
+				slidesPerView: 4,
+			},
+		},
+	});
+}
+
 // project-2-slider
 if($('.fx-p2-active').length) {
 	let slider = new Swiper('.fx-p2-active', {
@@ -799,7 +888,7 @@ if($('.fx-t2-active').length) {
 				slidesPerView: 1,
 			},
 			576: {
-				slidesPerView: 1,
+				slidesPerView: 2,
 			},
 			768: {
 				slidesPerView: 2,

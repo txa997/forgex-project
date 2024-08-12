@@ -47,6 +47,22 @@
 }
 
 
+.fx-cta-1-form {
+    &:is(.fx-cta-4) {
+        .fx-cta-1-form-input {
+            &:focus {
+                border-color: var(--fx-clr-sd-3);
+            }
+        }
+
+        .fx-cta-1-form-btn {
+            &:hover {
+                color: var(--fx-clr-sd-3);
+            }
+        }
+    }
+}
+
 /* 
     form-1-end
 */

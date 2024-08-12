@@ -106,3 +106,24 @@
 /* 
     marquee-text-2-end
 */
+/* 
+    marquee-text-5-start
+*/
+.fx-marquee-text-1 {
+    &:is(.fx-marquee-text-4) {
+        .fx-marquee-text-1-item .item-text {
+            color: #fff;
+
+            &:hover {
+                color: var(--fx-clr-pr-1);
+            }
+        }
+
+        .fx-marquee-text-1-item svg * {
+            fill: var(--fx-clr-pr-1);
+        }
+    }
+}
+/* 
+    marquee-text-5-end
+*/

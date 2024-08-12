@@ -196,6 +196,19 @@
             background: #fff;
             clip-path: polygon(10% 0, 100% 0, 100% 65%, 90% 100%, 0 100%, 0 35%);
         }
+
+        &:is(.has-hover-black) {
+
+            .text {
+                &::after {
+                    color: #fff;
+                }
+
+            }
+            &:hover {
+                background: #000;
+            }
+        }
     }
 }
 /* 
@@ -271,6 +284,62 @@
 
 /* 
     playbtn-1-end
+*/
+
+/* 
+    playbtn-2-start
+*/
+
+.fx-playbtn-2 {
+    display: flex;
+    flex: 0 0 auto;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--fx-clr-pr-1);
+    position: relative;
+    z-index: 1;
+    transition: all .3s var(--cube-1);
+
+
+    @media #{$md,$xs} {
+        width: 70px;
+        height: 70px;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: rgb(255 255 255 / 40%);
+        z-index: -1;
+        transform: scale(1.3);
+        animation: fx-scaling 6s linear infinite;
+        animation-delay: 3s;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: rgb(255 255 255 / 30%);
+        z-index: -1;
+        transform: scale(1.6);
+        animation: fx-scaling 6s linear infinite;
+    }
+}
+
+
+/* 
+    playbtn-2-end
 */
 
 
