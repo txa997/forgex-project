@@ -210,6 +210,49 @@
             }
         }
     }
+
+    &:is(.has-btn-5) {
+        background: var(--fx-clr-pr-2);
+
+        .text {
+            &::before {
+                color: #000;
+            }
+            &::after {
+                color: #fff;
+            }
+        }
+
+        i {
+            color: #000;
+        }
+
+        &:hover {
+            background: #000;
+
+            i {
+                color: #fff;
+            }
+        }
+
+        &:is(.hover-white) {
+
+            .text {
+                &::after {
+                    color: var(--fx-clr-pr-2);
+                }
+            }
+
+            &:hover {
+                background: #fff;
+
+                i {
+                    color: var(--fx-clr-pr-2);
+                }
+       
+            }
+        }
+    }
 }
 /* 
     pr-btn-1-end

@@ -125,6 +125,28 @@ document.addEventListener("DOMContentLoaded", function () {
 				});
 			}
 
+			// home-2-hero
+			if($('.fx-h5-active').length) {
+				let slider = new Swiper('.fx-h5-active', {
+					loop: true,
+					spaceBetween: 40,
+					speed: 500,
+					effect: 'slide',
+					direction: "vertical",
+					mousewheel: true,
+					autoplay: {
+						delay: 40000000,
+					},
+			
+					pagination: {
+						el: ".fx-hero-5-pagination",
+						clickable: true,
+					},
+			
+			
+				});
+			}
+
 			// breadcrumb
 			var breadcrumb = gsap.timeline();
 			breadcrumb.to(".breadcrumb-title .split-line div" , { yPercent: -100, delay: -.5, })
