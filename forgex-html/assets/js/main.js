@@ -772,7 +772,7 @@ if($('.fx-t4-active').length) {
 		slidesPerView: 4,
 
 		autoplay: {
-			delay: 40000000,
+			delay: 4000,
 		},
 
 

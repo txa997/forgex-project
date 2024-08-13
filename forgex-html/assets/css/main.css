@@ -5221,6 +5221,26 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding-right: 60px;
   margin-top: -272px;
 }
+@media only screen and (min-width: 2800px) and (max-width: 2999px) {
+  .fx-about-4-video {
+    height: 2500px;
+  }
+}
+@media only screen and (min-width: 2600px) and (max-width: 2799px) {
+  .fx-about-4-video {
+    height: 2300px;
+  }
+}
+@media only screen and (min-width: 2400px) and (max-width: 2599px) {
+  .fx-about-4-video {
+    height: 2150px;
+  }
+}
+@media only screen and (min-width: 2199px) and (max-width: 2399px) {
+  .fx-about-4-video {
+    height: 2150px;
+  }
+}
 @media only screen and (min-width: 1600px) and (max-width: 1799px) {
   .fx-about-4-video {
     height: 1480px;
