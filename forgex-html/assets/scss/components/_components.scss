@@ -178,6 +178,18 @@
     display: block;
     height: 60px;
 }
+
+.has-h5-redius {
+    border-radius: 0 0 56px 56px;
+
+    @media #{$xs} {
+        border-radius: 0 0 10px 10px;
+    }
+
+    @media #{$sm} {
+        border-radius: 0 0 20px 20px;
+    }
+}
 /* 
     fx-gap-end
 */

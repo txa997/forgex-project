@@ -801,3 +801,130 @@
 /* 
     services-4-end
 */
+
+/* 
+    services-5-start
+*/
+.fx-services-5 {
+
+    &-area {
+        background: #fff;
+    }
+
+    &-scn-title {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-wrap {
+        position: relative;
+        display: block;
+    }
+
+    &-card-posi {
+        position: sticky;
+        top: 100px;
+        z-index: 1;
+        margin-bottom: 64px;
+        background: #fff;
+        border-radius: 16px;
+
+        @media #{$xs} {
+            position: relative;
+        }
+
+        @media #{$sm} {
+            position: sticky;
+        }
+
+        .card-number {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            writing-mode: vertical-lr;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            display: flex;
+            gap: 16px;
+
+            span {
+                &:nth-child(1) {
+                    opacity: 32%;
+                }
+            }
+        }
+    }
+
+    &-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 16px;
+        background: #F6F6F6;
+        padding: 20px;
+        align-items: center;
+        gap: 20px;
+        clip-path: polygon(40px 0px, 16px 0px, 16px 0px, 13.40471592px 0.20941315px, 10.94276096px 0.8156912px, 8.64707704px 1.78589205px, 6.55060608px 3.0870736px, 4.68629px 4.68629375px, 3.08707072px 6.5506104px, 1.78589016px 8.64708145px, 0.81569024px 10.9427648px, 0.20941288px 13.40471835px, 2.6488864513577E-31px 16px, 0px calc(50% - 137px), 0px calc(50% - 137px), 0.20941288px calc(50% - 134.4047062px), 0.81569024px calc(50% - 131.9427456px), 1.78589016px calc(50% - 129.6470594px), 3.08707072px calc(50% - 127.5505888px), 4.68629px calc(50% - 125.686275px), 6.55060608px calc(50% - 124.0870592px), 8.64707704px calc(50% - 122.7858826px), 10.94276096px calc(50% - 121.8156864px), 13.40471592px calc(50% - 121.2094118px), 16px calc(50% - 121px), 24px calc(50% - 121px), 24px calc(50% - 121px), 26.5952938px calc(50% - 120.790599px), 29.0572544px calc(50% - 120.184352px), 31.3529406px calc(50% - 119.214193px), 33.4494112px calc(50% - 117.913056px), 35.313725px calc(50% - 116.313875px), 36.9129408px calc(50% - 114.449584px), 38.2141174px calc(50% - 112.353117px), 39.1843136px calc(50% - 110.057408px), 39.7905882px calc(50% - 107.595391px), 40px calc(50% - 105px), 40px calc(100% - 16px), 40px calc(100% - 16px), 40.2094118px calc(100% - 13.404609px), 40.8156864px calc(100% - 10.942592px), 41.7858826px calc(100% - 8.646883px), 43.0870592px calc(100% - 6.550416px), 44.686275px calc(100% - 4.686125px), 46.5505888px calc(100% - 3.086944px), 48.6470594px calc(100% - 1.785807px), 50.9427456px calc(100% - 0.81564800000001px), 53.4047062px calc(100% - 0.20940100000001px), 56px calc(100% - 0px), calc(100% - 16px) calc(100% - 0px), calc(100% - 16px) calc(100% - 0px), calc(100% - 13.40388px) calc(100% - 0.20940100000001px), calc(100% - 10.94144px) calc(100% - 0.81564799999984px), calc(100% - 8.6455600000002px) calc(100% - 1.785807px), calc(100% - 6.5491199999999px) calc(100% - 3.086944px), calc(100% - 4.6849999999999px) calc(100% - 4.686125px), calc(100% - 3.08608px) calc(100% - 6.550416px), calc(100% - 1.7852400000002px) calc(100% - 8.646883px), calc(100% - 0.81536000000006px) calc(100% - 10.942592px), calc(100% - 0.20931999999993px) calc(100% - 13.404609px), calc(100% - 2.2737367544323E-13px) calc(100% - 16px), calc(100% - 0px) 16px, calc(100% - 0px) 16px, calc(100% - 0.20931999999971px) 13.40471592px, calc(100% - 0.81536000000006px) 10.94276096px, calc(100% - 1.7852400000002px) 8.64707704px, calc(100% - 3.08608px) 6.55060608px, calc(100% - 4.6849999999999px) 4.68629px, calc(100% - 6.5491200000001px) 3.08707072px, calc(100% - 8.6455599999999px) 1.78589016px, calc(100% - 10.94144px) 0.81569024px, calc(100% - 13.40388px) 0.20941288px, calc(100% - 16px) 2.6488864513577E-31px, 40px 0px); 
+
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+
+        &-img {
+            height: 402px;
+            clip-path: polygon(40px 0px, 12px 0px, 12px 0px, 10.05353694px 0.15705966px, 8.20707072px 0.61176768px, 6.48530778px 1.33941762px, 4.91295456px 2.31530304px, 3.5147175px 3.5147175px, 2.31530304px 4.91295456px, 1.33941762px 6.48530778px, 0.61176768px 8.20707072px, 0.15705966px 10.05353694px, 1.9866648385183E-31px 12px, 0px calc(50% - 153px), 0px calc(50% - 153px), 0.15705966px calc(50% - 151.0535418px), 0.61176768px calc(50% - 149.2070784px), 1.33941762px calc(50% - 147.4853166px), 2.31530304px calc(50% - 145.9129632px), 3.5147175px calc(50% - 144.514725px), 4.91295456px calc(50% - 143.3153088px), 6.48530778px calc(50% - 142.3394214px), 8.20707072px calc(50% - 141.6117696px), 10.05353694px calc(50% - 141.1570602px), 12px calc(50% - 141px), 28px calc(50% - 141px), 28px calc(50% - 141px), 29.9464582px calc(50% - 140.8429398px), 31.7929216px calc(50% - 140.3882304px), 33.5146834px calc(50% - 139.6605786px), 35.0870368px calc(50% - 138.6846912px), 36.485275px calc(50% - 137.485275px), 37.6846912px calc(50% - 136.0870368px), 38.6605786px calc(50% - 134.5146834px), 39.3882304px calc(50% - 132.7929216px), 39.8429398px calc(50% - 130.9464582px), 40px calc(50% - 129px), 40px calc(100% - 12px), 40px calc(100% - 12px), 40.1570602px calc(100% - 10.053639px), 40.6117696px calc(100% - 8.2072319999999px), 41.3394214px calc(100% - 6.485493px), 42.3153088px calc(100% - 4.913136px), 43.514725px calc(100% - 3.514875px), 44.9129632px calc(100% - 2.315424px), 46.4853166px calc(100% - 1.339497px), 48.2070784px calc(100% - 0.611808px), 50.0535418px calc(100% - 0.15707099999997px), 52px calc(100% - 5.6843418860808E-14px), calc(100% - 12px) calc(100% - 0px), calc(100% - 12px) calc(100% - 0px), calc(100% - 10.053639px) calc(100% - 0.15707099999997px), calc(100% - 8.2072319999999px) calc(100% - 0.61180799999988px), calc(100% - 6.4854930000001px) calc(100% - 1.3394969999999px), calc(100% - 4.913136px) calc(100% - 2.315424px), calc(100% - 3.5148750000001px) calc(100% - 3.514875px), calc(100% - 2.315424px) calc(100% - 4.913136px), calc(100% - 1.3394970000001px) calc(100% - 6.485493px), calc(100% - 0.61180800000011px) calc(100% - 8.207232px), calc(100% - 0.15707099999986px) calc(100% - 10.053639px), calc(100% - 1.1368683772162E-13px) calc(100% - 12px), calc(100% - 0px) 12px, calc(100% - 0px) 12px, calc(100% - 0.15707099999997px) 10.05353694px, calc(100% - 0.611808px) 8.20707072px, calc(100% - 1.3394969999999px) 6.48530778px, calc(100% - 2.315424px) 4.91295456px, calc(100% - 3.5148750000001px) 3.5147175px, calc(100% - 4.913136px) 2.31530304px, calc(100% - 6.485493px) 1.33941762px, calc(100% - 8.207232px) 0.61176768px, calc(100% - 10.053639px) 0.15705966px, calc(100% - 12px) 1.9866648385183E-31px, 40px 0px);
+        }
+
+        &-content {
+            padding: 0 36px;
+
+            @media #{$lg,$md,$xs} {
+                padding: 0 ;
+            }
+
+            .card-title {
+                font-size: 45px;
+                transition: all .3s var(--cube-1);
+                margin-bottom: 12px;
+                line-height: .88;
+
+                @media #{$xl,$lg} {
+                    font-size: 38px;
+                }
+
+                @media #{$md} {
+                    font-size: 30px;
+                }
+
+                @media #{$xs} {
+                    font-size: 26px;
+                }
+
+                span {
+                    display: inline-block;
+                    color: var(--fx-clr-pr-2);
+                }
+
+                &:hover {
+                    color: var(--fx-clr-pr-2);
+                    transform: translateX(3px);
+                }
+            }
+
+            .card-disc {
+                line-height: 26px;
+                margin-bottom: 21px;
+            }
+        }
+        
+        
+    }
+    
+}
+/* 
+    services-5-end
+*/

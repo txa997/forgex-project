@@ -125,13 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
 				});
 			}
 
-			// home-2-hero
+			// home-5-hero
 			if($('.fx-h5-active').length) {
 				let slider = new Swiper('.fx-h5-active', {
 					loop: true,
 					spaceBetween: 40,
 					speed: 500,
-					effect: 'slide',
 					direction: "vertical",
 					mousewheel: true,
 					autoplay: {
@@ -231,6 +230,25 @@ $('.overlay, .search_1_popup_close').on('click', function() {
 	$('.search_1_popup_active').removeClass('active');
 	$('.overlay').removeClass('active');
 })
+
+
+// hero-5-slider
+if($('.fx-noscrolling').length) {
+	const fxnoscrollcontent = document.querySelector('.fx-noscrolling');
+	const fxh5 = document.body;
+	
+	fxnoscrollcontent.addEventListener('mouseenter', function() {
+	
+		fxh5.classList.add('lenis');
+	});
+	fxnoscrollcontent.addEventListener('mouseleave', function() {
+	
+		fxh5.classList.remove('lenis');
+	
+	});
+}
+
+
 
 
 
