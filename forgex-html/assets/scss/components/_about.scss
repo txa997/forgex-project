@@ -697,7 +697,10 @@
 */
 .fx-about-5 {
     &-area {
+        position: relative;
         background: #E5EAE9;
+        margin-top: -55px;
+        z-index: 5;
     }
     
     &-scn-title {

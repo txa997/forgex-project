@@ -116,6 +116,8 @@
     client-5-start
 */
 .fx-client-5-area {
+    position: relative;
+    z-index: 7;
     .fx-client-4-title {
         .has-clr {
             color: var(--fx-clr-pr-2);

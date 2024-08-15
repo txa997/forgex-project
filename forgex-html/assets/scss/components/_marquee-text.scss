@@ -127,3 +127,27 @@
 /* 
     marquee-text-5-end
 */
+/* 
+    marquee-text-6-start
+*/
+.fx-marquee-text-1 {
+    &:is(.fx-marquee-text-6) {
+        .fx-marquee-text-1-item .item-text {
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        .fx-marquee-text-1-item svg {
+            &:hover {
+                * {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+/* 
+    marquee-text-6-end
+*/

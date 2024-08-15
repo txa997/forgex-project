@@ -491,3 +491,39 @@
 /* 
     testimonial-4-end
 */
+/* 
+    testimonial-5-start
+*/
+.fx-testimonial-5 {
+    &-area {
+        margin-top: -55px;
+        position: relative;
+        z-index: 4;
+    }
+
+    &:is(.fx-testimonial-2-slider) {
+        .fx-testimonial-2-slider {
+            &-item {
+                .fx-star-1 {
+                    color: var(--fx-clr-pr-2);
+                }
+            }
+
+            &-pagination {
+                .fx-slider-pagi-1 span {
+                    &:is(.swiper-pagination-bullet-active) {
+                        background: var(--fx-clr-pr-2);
+
+                        &::after {
+                            border-color: var(--fx-clr-pr-2);
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+/* 
+    testimonial-5-end
+*/

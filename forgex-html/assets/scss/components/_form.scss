@@ -63,6 +63,22 @@
     }
 }
 
+.fx-cta-1-form {
+    &:is(.fx-cta-5-form) {
+        .fx-cta-1-form-input {
+            &:focus {
+                border-color: var(--fx-clr-pr-2);
+            }
+        }
+
+        .fx-cta-1-form-btn {
+            &:hover {
+                color: var(--fx-clr-pr-2);
+            }
+        }
+    }
+}
+
 /* 
     form-1-end
 */

@@ -809,6 +809,8 @@
 
     &-area {
         background: #fff;
+        position: relative;
+        z-index: 6;
     }
 
     &-scn-title {

@@ -132,3 +132,28 @@
 /* 
     cta-4-end
 */
+/* 
+    cta-5-start
+*/
+.fx-cta-5 {
+    &-area {
+        background: #070707;
+        margin-top: -55px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &:is(.fx-cta-1-content) {
+        .fx-cta-1-content-title {
+            font-size: 45px;
+            line-height: .88;
+
+            @media #{$lg,$md,$xs} {
+                font-size: 35px;
+            }
+        }
+    }
+}
+/* 
+    cta-5-end
+*/

@@ -615,3 +615,147 @@
 */
 
 
+/* 
+   footer-5-start
+*/
+.fx-footer-5 {
+   &-area {
+      margin-top: -55px;
+      position: relative;
+   }
+
+   &-bg-shape {
+      width: 14%;
+      position: absolute;
+      bottom: 47%;
+      left: 0;
+
+      @media #{$xl} {
+         bottom: 45.7%;
+      }
+
+      @media #{$lg} {
+         bottom: 46.7%;
+      }
+
+      @media #{$md,$xs} {
+         display: none;
+      }
+   }
+
+   &-logo {
+      max-width: 200px;
+   }
+
+   &:is(.fx-footer-1-widget) {
+      grid-template-columns: 3fr 1fr 1.5fr 1.8fr;
+
+      @media #{$xl,$lg} {
+         grid-template-columns: 2fr 1fr 1.5fr 1.8fr;
+      }
+
+      @media #{$md} {
+         grid-template-columns: 1fr 1fr ;
+      }
+
+      @media #{$xs} {
+         grid-template-columns: 1fr ;
+      }
+
+      @media #{$sm} {
+         grid-template-columns: 1fr 1fr ;
+      }
+   }
+
+   &:is(.fx-footer-1-menu) {
+      li {
+         &:is(.dropdown) > a::after {
+            color: #000;
+         }
+
+
+         a {
+            &:hover {
+               color: #fff;
+
+               &::after {
+                  color: #fff;
+               }
+            }
+         }
+      }
+   }
+
+   &:is(.fx-footer-1-menu-2 ) {
+      li  {
+         a {
+            padding-left: 14px;
+
+            &::after {
+               transform: scale(1);
+               background: #000;
+            }
+
+            &:hover {
+               color: #fff;
+               padding-left: 0;
+
+               &::after {
+                  transform: scale(0);
+               }
+            }
+         }
+      }
+   }
+
+   &:is(.fx-footer-1-contact) {
+      li {
+         i {
+            color: #000;
+         }
+
+         a {
+            &:hover {
+               color: #fff;
+            }
+         }
+      }
+   }
+
+   &:is(.fx-footer-1-disc) {
+      border-color: #070707;
+
+      .fx-footer-1-disc-text {
+         opacity: 100%;
+      }
+
+      .btn-posi {
+         background: #070707;
+      }
+
+      .fx-back-top-1 {
+         color: var(--fx-clr-pr-2);
+      }
+   }
+
+   &:is(.fx-footer-1-copyright) {
+      border-color: #070707;
+   }
+
+   &:is(.fx-footer-1-copyright-menu) {
+      li {
+         a {
+            &:hover {
+               color: #fff;
+            }
+         }
+      }
+   }
+   
+}
+
+/* 
+   footer-5-end
+*/
+
+
