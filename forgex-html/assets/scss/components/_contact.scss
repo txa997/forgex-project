@@ -175,6 +175,7 @@
 .fx-contact-us-4 {
     &:is(.fx-contact-us-1-img ) {
         border-radius: 0;
+        clip-path: polygon(88% 0, 100% 11%, 100% 100%, 0 100%, 0 0);
     }
     &:is(.fx-contact-us-1-content ) {
         border-radius: 0;

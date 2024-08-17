@@ -190,6 +190,10 @@ input:focus::placeholder, textarea:focus::placeholder {
     overflow: hidden;
 }
 
+.swiper-notification {
+    display: none;
+}
+
 .img-cover {
     img {
         width: 100%;
