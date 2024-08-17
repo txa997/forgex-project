@@ -107,7 +107,7 @@
         margin-right: 32px;
 
         @media #{$xl,$lg} {
-          margin-right: 20px;
+          margin-right: 15px;
         }
       }
       
@@ -336,6 +336,10 @@
     gap: 30px;
     padding-left: 32px;
     justify-content: space-between;
+
+    @media #{$lg} {
+      gap: 10px;
+    }
 
     @media #{$md,$xs} {
       padding-top: 10px;
@@ -997,6 +1001,10 @@
 
       a {
         color: #fff;
+
+        &:is(.is-active) {
+          color: var(--fx-clr-pr-2);
+        }
       }
       
 

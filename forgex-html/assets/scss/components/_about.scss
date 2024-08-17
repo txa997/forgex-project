@@ -55,6 +55,9 @@
 
         .card-img {
             border-radius: 8px;
+            img {
+                transition: all  .5s var(--cube-1);
+            }
         }
 
         .card-tags {
@@ -92,6 +95,14 @@
         .card-disc {
             font-size: 16px;
             line-height: 24px;
+        }
+
+        &:hover {
+            .card-img {
+                img {
+                    transform: scale(105%);
+                }
+            }
         }
     }
 

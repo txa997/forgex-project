@@ -60,6 +60,10 @@
             .item-img {
                 border-radius: 8px;
                 height: 241px;
+         
+                img {
+                    transition: all .8s var(--cube-1);
+                }
             }
 
             .item-date {
@@ -114,6 +118,7 @@
 
                 &:hover {
                     color: var(--fx-clr-pr-1);
+                    transform: translateX(3px);
                 }
 
                 a {
@@ -122,6 +127,15 @@
                     }
                 }
             }
+
+            
+            &:hover {
+                .item-img {
+                    img {
+                        transform: scale(105%);
+                    }
+                }      
+            } 
         }
     }
 }

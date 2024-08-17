@@ -1708,7 +1708,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 45px;
   font-weight: 600;
   color: #000;
-  letter-spacing: -1.5px;
+  letter-spacing: -1px;
   line-height: 1.088;
   margin-bottom: 0;
 }
@@ -2079,12 +2079,14 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 30px;
   font-weight: 300;
   transition: 0.2s;
+  animation: fd-bounce-2 1.5s infinite;
 }
 .fx-play-btn-1:hover {
+  transform: translateX(3px);
   color: var(--fx-clr-sd-1);
 }
 .fx-play-btn-1:hover i {
-  transform: translateX(3px);
+  animation: unset;
 }
 .fx-play-btn-1:is(.has-hover-white):hover {
   color: #fff;
@@ -2627,6 +2629,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .txa-offcanvas-contact li:not(:last-child) {
   margin-bottom: 10px;
+}
+.txa-offcanvas-contact li span {
+  display: flex;
+  gap: 11px;
+  align-items: center;
 }
 .txa-offcanvas-contact li a {
   display: flex;
@@ -3319,7 +3326,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
   .main-navigation .navbar-nav li:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 15px;
   }
 }
 .main-navigation .navbar-nav li:is(.dropdown) > a {
@@ -3510,6 +3517,11 @@ input:focus::placeholder, textarea:focus::placeholder {
   gap: 30px;
   padding-left: 32px;
   justify-content: space-between;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .fx-header-2-main {
+    gap: 10px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .fx-header-2-main {
@@ -4049,6 +4061,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .main-navigation:is(.has-header-5) li a {
   color: #fff;
 }
+.main-navigation:is(.has-header-5) li a:is(.is-active) {
+  color: var(--fx-clr-pr-2);
+}
 .main-navigation:is(.has-header-5) li:hover > a {
   color: var(--fx-clr-pr-2);
 }
@@ -4178,7 +4193,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .fx-hero-1-slider-item-title {
   font-size: 64px;
   line-height: 0.9;
-  letter-spacing: -3px;
+  letter-spacing: -2px;
   color: #fff;
   font-weight: 600;
   margin-bottom: 30px;
@@ -5227,7 +5242,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   z-index: -1;
 }
 .fx-serve-1-scn-title {
-  max-width: 695px;
+  max-width: 710px;
 }
 .fx-serve-1-slider {
   transform: translateX(312px);
@@ -5393,6 +5408,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .fx-about-1-card .card-img {
   border-radius: 8px;
 }
+.fx-about-1-card .card-img img {
+  transition: all 0.5s var(--cube-1);
+}
 .fx-about-1-card .card-tags {
   display: flex;
   gap: 8px;
@@ -5422,6 +5440,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 .fx-about-1-card .card-disc {
   font-size: 16px;
   line-height: 24px;
+}
+.fx-about-1-card:hover .card-img img {
+  transform: scale(105%);
 }
 .fx-about-1-content .disc {
   margin-bottom: 50px;
@@ -8068,6 +8089,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 8px;
   height: 241px;
 }
+.fx-blog-1-item-single .item-img img {
+  transition: all 0.8s var(--cube-1);
+}
 .fx-blog-1-item-single .item-date {
   position: absolute;
   top: 8px;
@@ -8115,9 +8139,13 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .fx-blog-1-item-single .item-title:hover {
   color: var(--fx-clr-pr-1);
+  transform: translateX(3px);
 }
 .fx-blog-1-item-single .item-title a span {
   color: var(--fx-clr-pr-1);
+}
+.fx-blog-1-item-single:hover .item-img img {
+  transform: scale(105%);
 }
 
 /* 
@@ -8419,6 +8447,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 .fx-form-1-box:not(:last-child) {
   margin-bottom: 28px;
 }
+.fx-form-1-box:focus-within .fx-form-1-label {
+  color: var(--fx-clr-pr-1);
+  opacity: 1;
+}
 .fx-form-1-label {
   font-family: var(--fx-font-pr-1);
   text-transform: capitalize;
@@ -8429,6 +8461,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   display: block;
   line-height: 1;
   margin-bottom: 5px;
+  transition: all 0.3s var(--cube-1);
 }
 .fx-form-1-input {
   display: block;
@@ -8439,8 +8472,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding: 0px 0px;
   border-bottom: 1px solid #D9D9D9;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #000;
+  transition: all 0.3s var(--cube-1);
 }
 .fx-form-1-input::placeholder {
   opacity: 80%;
@@ -8448,6 +8482,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .fx-form-1-input:is(textarea) {
   height: 100px;
+}
+.fx-form-1-input:hover {
+  border-color: #000;
 }
 
 .fx-cta-1-form:is(.fx-cta-4) .fx-cta-1-form-input:focus {
@@ -8539,7 +8576,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .fx-contact-us-1-info-box .address {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 28px;
   max-width: 190px;
 }
@@ -10082,6 +10119,13 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 16px;
   line-height: 1.2;
 }
+.fx-footer-1-copyright-text a {
+  font-weight: 500;
+  transition: all 0.3s var(--cube-1);
+}
+.fx-footer-1-copyright-text a:hover {
+  color: var(--fx-clr-pr-1);
+}
 .fx-footer-1-copyright-menu li {
   line-height: 1;
   display: inline-block;
@@ -10445,6 +10489,9 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .fx-footer-5:is(.fx-footer-1-copyright) {
   border-color: #070707;
+}
+.fx-footer-5:is(.fx-footer-1-copyright) .fx-footer-1-copyright-text a:hover {
+  color: #fff;
 }
 .fx-footer-5:is(.fx-footer-1-copyright-menu) li a:hover {
   color: #fff;

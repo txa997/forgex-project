@@ -233,6 +233,15 @@
       &-text {
          font-size: 16px;
          line-height: 1.2;
+
+         a {
+            font-weight: 500;
+            transition: all .3s var(--cube-1);
+
+            &:hover {
+               color: var(--fx-clr-pr-1);
+            }
+         }
       }
 
       &-menu li {
@@ -740,6 +749,12 @@
 
    &:is(.fx-footer-1-copyright) {
       border-color: #070707;
+
+      .fx-footer-1-copyright-text a {
+         &:hover {
+            color: #fff;
+         }
+      }
    }
 
    &:is(.fx-footer-1-copyright-menu) {

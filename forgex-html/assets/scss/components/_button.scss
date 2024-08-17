@@ -308,13 +308,16 @@
         display: inline-block;
         font-size: 30px;
         font-weight: 300;
-        transition: .2s 
+        transition: .2s ;
+        animation: fd-bounce-2 1.5s  infinite;
+        
     }
 
     &:hover {
+        transform: translateX(3px);
         color: var(--fx-clr-sd-1);
         i {
-            transform: translateX(3px);
+            animation: unset;
         }
     }
 
