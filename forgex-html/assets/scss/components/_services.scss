@@ -16,7 +16,7 @@
 
     }
 
-    &-bg-img {
+    &-bg-img-slider {
         position: absolute;
         right: 12px;
         top: 12px;
@@ -31,6 +31,25 @@
 
         @media #{$md,$xs} {
             display: none;
+        }
+
+        .swiper-container {
+            height: 100%;
+            width: 100%;
+
+            .swiper-wrapper {
+                height: 100%;
+                width: 100%;
+
+                .swiper-slide {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        .fx-services-1-bg-img {
+            height: 100%;
         }
     }
 

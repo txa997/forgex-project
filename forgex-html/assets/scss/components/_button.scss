@@ -253,6 +253,44 @@
             }
         }
     }
+
+    &:is(.has-h6) {
+        background: var(--fx-clr-pr-2);
+
+        .text {
+            &::before {
+                color: #000;
+            }
+        }
+
+        i {
+            color: #000;
+        }
+
+        &:hover {
+            background: #000;
+
+            i {
+                color: #fff;
+            }
+        }
+
+        &:is(.hover-white) {
+
+            .text {
+                &::after {
+                    color: #000;
+                }
+            }
+            &:hover {
+                background: #fff;
+
+                i {
+                    color: #000;
+                }
+            }
+        }
+    }
 }
 /* 
     pr-btn-1-end
@@ -388,6 +426,57 @@
     playbtn-2-end
 */
 
+
+
+/* 
+    land-btn-1-start
+*/
+.fx-land-1-btn {
+    border-radius: 0;
+    border: none;
+    font-family: var(--fx-font-pr-1);
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    padding-left: 0;
+    line-height: 1;
+    padding-right: 17px;
+    height: auto;
+
+    &::after {
+        width: 7px;
+        height: 7px;
+        border-color: var(--fx-clr-pr-2);
+        right: 2px;
+        margin-top: -6px;
+    }
+
+    .current {
+        transition: all .3s ease-in-out;
+    }
+
+
+    &:hover {
+        .current {
+            color: var(--fx-clr-pr-2);
+        }
+    }
+
+    .list {
+        li {
+            &:is(.selected) {
+                color: var(--fx-clr-pr-2);
+            }
+        }
+    }
+
+}
+
+
+/* 
+    land-btn-1-end
+*/
 
 
 /* 
