@@ -20,6 +20,7 @@
         transform-origin: top;
         transform: scaleY(0);
         visibility: hidden;
+        box-shadow: 0 5px 10px 1px rgb(0 0 0 / 5%);
     
         &-close {
             height: 40px;

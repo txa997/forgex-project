@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					direction: "vertical",
 					mousewheel: true,
 					autoplay: {
-						delay: 40000000,
+						delay: 4000,
 					},
 			
 					pagination: {
@@ -145,6 +145,29 @@ document.addEventListener("DOMContentLoaded", function () {
 			
 				});
 			}
+
+			// home-3-hero
+			if($('.fx-h6-active').length) {
+				let slider = new Swiper('.fx-h6-active', {
+					loop: true,
+					spaceBetween: 0,
+					speed: 500,
+					autoplay: {
+						delay: 4000,
+					},
+			
+					navigation: {
+						nextEl: ".fx-h6-slider-next",
+						prevEl: ".fx-h6-slider-prev",
+					},
+			
+				});
+			}
+
+			var fxh6imgglow = gsap.timeline();
+			fxh6imgglow.to(".fx-hero-6-bg-glow" , { opacity: .7,  duration:1 })
+			fxh6imgglow.to(".fx-hero-6-img-glow" , { xPercent: -100,  duration:1 },"<.5")
+			fxh6imgglow.to(".fx-hero-6-img-glow-2" , { xPercent: -100,  duration:1 , })
 
 			// breadcrumb
 			var breadcrumb = gsap.timeline();
@@ -594,6 +617,52 @@ var fxa3 = gsap.timeline({
 });
 	
 fxa3.from("[fx-so4-tri-item]" , { xPercent: 100, yPercent: -100 })
+
+// about-6
+var fxa6 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: fxa6,
+	  trigger: '.fx-about-6-wrap',
+	  start: "top 50%",
+	  end: "top -100%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+fxa6.from(".fx-about-6-pop-img" , { yPercent: 50 })
+
+var fxa6t2 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: fxa6t2,
+	  trigger: '.fx-about-6-wrap',
+	  start: "top -20%",
+	  toggleActions: "play none play reverse",
+	  markers: false
+	}
+});
+	
+fxa6t2.to(".fx-about-6-area" , { background: "#000" })
+fxa6t2.to(".fx-about-6-scn-title-big" , { color: "#DFE1E5" }, "<=")
+
+var fxa6t3 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: fxa6t3,
+	  trigger: '.fx-about-6-content',
+	  start: "top 80%",
+	  end: "top -50%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+fxa6t3.to(".fx-about-6-content-img" , { yPercent: -50 })
+
 	
 // serve-1-slider
 if($('.fx-serve-1-active').length) {
@@ -1022,6 +1091,54 @@ if($('.fx-t3-active').length) {
 
 	});
 }
+
+
+// services-6-slider
+if($('.fx-s6-active').length) {
+	let slider = new Swiper('.fx-s6-active', {
+		loop: true,
+		spaceBetween: 32,
+		speed: 500,
+		slidesPerView: 7,
+
+		autoplay: {
+			delay: 400000,
+		},
+
+		pagination: {
+			el: ".fx-s6-pagination",
+			clickable: true,
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 4,
+			},
+			1400: {
+				slidesPerView: 5,
+			},
+			1600: {
+				slidesPerView: 5,
+			},
+			1800: {
+				slidesPerView: 6,
+			},
+		},
+	});
+}
+
 
 
 // cursor follow
