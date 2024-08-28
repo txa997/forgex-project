@@ -60,7 +60,8 @@
       }
 
       &:hover {
-        background: var(--fx-clr-pr-1);
+        background: #000;
+        color: #fff;
       }
     }
 
@@ -183,7 +184,8 @@
         transition: all .3s ease-in-out;
 
         &:hover {
-          color: var(--fx-clr-pr-1);
+          transform: translateX(5px);
+          opacity: 50%;
         }
       } 
     

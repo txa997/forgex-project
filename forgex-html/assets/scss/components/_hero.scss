@@ -1378,7 +1378,15 @@
                 }
 
                 .item-content {
-                    padding: 32px 18px;
+                    padding: 32px 28px;
+
+                    @media #{$xs} {
+                        padding: 32px 28px;
+                    }
+
+                    @media #{$sm} {
+                        padding: 32px 18px;
+                    }
                 }
 
                 .item-title {

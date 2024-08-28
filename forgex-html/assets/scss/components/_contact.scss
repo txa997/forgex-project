@@ -12,9 +12,15 @@
     }
 
     &-left {
+
+        @media #{$lg} {
+            padding: 50px 0;
+        }
+
         @media #{$md,$xs} {
             margin-bottom: 50px;
         }
+
         .fx-form-1 {
             max-width: 384px;
         }
@@ -243,4 +249,21 @@
 }
 /* 
     contact-us-5-end
+*/
+/* 
+    contact-us-6-start
+*/
+.fx-contact-us-1-img {
+    &:is(.has-contact-6) {
+        border-radius: 56px 56px 0 0;
+    }
+}
+
+.fx-contact-us-1-content {
+    &:is(.has-contact-6) {
+        border-radius: 0 0 56px 56px;
+    }
+}
+/* 
+    contact-us-6-end
 */

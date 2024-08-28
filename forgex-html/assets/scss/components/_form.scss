@@ -4,7 +4,6 @@
 .fx-form-1 {
 
 
-
     &-box {
         &:not(:last-child) {
             margin-bottom: 28px;
@@ -85,6 +84,17 @@
         .fx-cta-1-form-btn {
             &:hover {
                 color: var(--fx-clr-pr-2);
+            }
+        }
+    }
+}
+
+.fx-form-1 {
+    &:is(.has-home-6) {
+        .fx-form-1-box {
+            &:focus-within .fx-form-1-label {
+                color: var(--fx-clr-pr-2);
+                opacity: 1;
             }
         }
     }

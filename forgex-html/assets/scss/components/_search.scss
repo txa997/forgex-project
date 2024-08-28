@@ -49,8 +49,8 @@
             }
     
             &:hover {
-                background: var(--fx-clr-pr-1);
-                color: #000;
+                background: #000;
+                color: #fff;
             }
         }
 
@@ -140,8 +140,8 @@
 
             &:hover {
                 
-                background: var(--fx-clr-pr-1);
-                color: #000;
+                background: #000;
+                color: #fff;
             }
         }
     }
@@ -165,25 +165,6 @@
 
 
 
-
-
-
-.txa-search-box {
-    &:is(.has-home-6) {
-        .txa-search-box-close {
-            &:hover {
-                background: var(--fx-clr-pr-2);
-            }
-        }
-
-        .txa-search-tag-item {
-            &:hover {
-                background: var(--fx-clr-pr-2);
-                border-color: transparent;
-            }
-        }
-    }
-}
 
 /* 
     search-box-css-end

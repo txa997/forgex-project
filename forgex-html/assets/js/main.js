@@ -156,6 +156,18 @@ document.addEventListener("DOMContentLoaded", function () {
 						delay: 4000,
 					},
 			
+				});
+			}
+
+			if($('.fx-h6-active2').length) {
+				let slider = new Swiper('.fx-h6-active2', {
+					loop: true,
+					spaceBetween: 0,
+					speed: 500,
+					autoplay: {
+						delay: 5000,
+					},
+			
 					navigation: {
 						nextEl: ".fx-h6-slider-next",
 						prevEl: ".fx-h6-slider-prev",
@@ -648,20 +660,76 @@ var fxa6t2 = gsap.timeline({
 fxa6t2.to(".fx-about-6-area" , { background: "#000" })
 fxa6t2.to(".fx-about-6-scn-title-big" , { color: "#DFE1E5" }, "<=")
 
+
+
+if (window.innerWidth >= 992) {
+	var fxa6t3 = gsap.timeline({
+
+		scrollTrigger: {
+		  animation: fxa6t3,
+		  trigger: '.fx-about-6-content',
+		  start: "top 80%",
+		  end: "top -50%",
+		  scrub: 1,
+		  toggleActions: "play reverse play reverse",
+		  markers: false
+		}
+	});
+		
+	fxa6t3.to(".fx-about-6-content-img" , { yPercent: -50 })
+
+}
+
+
+
 var fxa6t3 = gsap.timeline({
 
 	scrollTrigger: {
 	  animation: fxa6t3,
-	  trigger: '.fx-about-6-content',
-	  start: "top 80%",
-	  end: "top -50%",
-	  scrub: 1,
-	  toggleActions: "play reverse play reverse",
+	  trigger: '.fx-about-6-experi',
+	  start: "top -10%",
+	  toggleActions: "play none play reverse",
 	  markers: false
 	}
 });
 	
-fxa6t3.to(".fx-about-6-content-img" , { yPercent: -50 })
+fxa6t3.to(".fx-about-6-area" , { background: "#fff" })
+fxa6t3.to(".fx-about-6-experi-year-title" , { color: "#000" }, "<=")
+fxa6t3.to(".fx-about-6-experi-year-text" , { color: "#000" }, "<=")
+fxa6t3.to(".fx-about-6-experi-title" , { color: "#000" }, "<=")
+
+
+if (window.innerWidth >= 992) {
+	const fxa6t4 =  gsap.timeline({
+		scrollTrigger: {
+			trigger: ".fx-about-6-experi-year",
+			start: "top 0%",
+			end:'bottom 0%',
+			scrub: 1,
+			pinSpacing: false, 
+			pin: ".fx-about-6-experi-year",
+			toggleActions: "play pause reverse reset",
+			markers: false,
+		}
+	});
+	
+	fxa6t4.to(".fx-about-6-experi-year-text", {
+		y: -500,
+		duration: 1,
+	})
+	
+	fxa6t4.to(".fx-about-6-experi-year", {
+		scale: 3,
+		xPercent: -50,
+		opacity: 0,
+		duration: 1,
+		display: "none"
+	}, "<=.5")
+
+
+	
+
+}
 
 	
 // serve-1-slider
@@ -1102,7 +1170,7 @@ if($('.fx-s6-active').length) {
 		slidesPerView: 7,
 
 		autoplay: {
-			delay: 400000,
+			delay: 4000,
 		},
 
 		pagination: {

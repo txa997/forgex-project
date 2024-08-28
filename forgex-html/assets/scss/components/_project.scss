@@ -433,6 +433,103 @@
 /* 
     project-3-end
 */
+/* 
+    project-6-start
+*/
+.fx-project-6 {
+    &-area {
+        margin-left: 20px;
+        margin-right: 20px;
+        position: relative;
+        z-index: 2;
+
+        @media #{$md,$xs} {
+            padding-top: 60px;
+            
+        }
+    }
+
+    &-scn-title {
+        max-width: 800px;
+    }
+
+    &-item {
+        border-radius: 32px;
+        padding: 20px;
+        margin-bottom: 64px;
+        position: sticky;
+        top: 110px;
+
+        @media #{$xs} {
+            position: unset;
+        }
+
+        @media #{$sm} {
+            position: sticky;
+        }
+
+
+
+        &-content {
+            background: rgb(255 255 255 / 88%);
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 40px 40px;
+            max-width: 382px;
+            width: 100%;
+            margin-left: auto;
+
+            @media #{$xs} {
+                padding: 40px 20px;
+            }
+
+            .item-count {
+                display: flex;
+                gap: 6px;
+                line-height: 1;
+                font-size: 18px;
+                color: rgb(0 0 0 / 40%);
+                margin-bottom: 135px;
+
+                @media #{$xl,$lg,$md,$xs} {
+                    margin-bottom: 90px;
+                }
+            }
+            
+            .item-title {
+                font-size: 45px;
+                line-height: .89;
+                margin-bottom: 19px;
+                transition: all .4s var(--cube-1);
+
+                @media #{$xl,$lg,$md,} {
+                    font-size: 35px;
+                }
+
+                @media #{$xs} {
+                    font-size: 30px;
+                }
+
+                &:hover {
+                    color: var(--fx-clr-pr-2);
+                    transform: translateX(3px);
+                }
+            }
+            
+            .item-disc {
+                line-height: 26px;
+                opacity: 72%;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+
+/* 
+    project-6-end
+*/
 
 
 

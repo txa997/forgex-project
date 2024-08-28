@@ -57,6 +57,10 @@
     gap: 80px;
     border-radius: 0 0 8px 8px;
 
+    @media #{$xl} {
+      gap: 60px;
+    }
+
     @media #{$lg,$md,$xs} {
       padding-left: 20px;
       gap: 30px;
