@@ -224,6 +224,7 @@
          justify-content: space-between;
          align-items: center;
 
+
          @media #{$xs} {
             justify-content: center;
             flex-wrap: wrap;
@@ -233,10 +234,12 @@
       &-text {
          font-size: 16px;
          line-height: 1.2;
+         color: #000000a3;
 
          a {
             font-weight: 500;
             transition: all .3s var(--cube-1);
+            color: #000;
 
             &:hover {
                color: var(--fx-clr-pr-1);
@@ -372,8 +375,12 @@
 .fx-footer-1-copyright-text {
    &:is(.has-footer-2) {
       color: rgb(255 255 255 / 64%);
-      b {
+      a {
          color: #fff;
+
+         &:hover {
+            color: var(--fx-clr-pr-1);
+         }
       }
    }
 } 
@@ -602,8 +609,12 @@
       .fx-footer-1-copyright-text {
          color: rgb(255 255 255 / 64%);
 
-         b {
+         a {
             color: #fff;
+
+            &:hover {
+               color: var(--fx-clr-pr-1);
+            }
          }
       }
 
