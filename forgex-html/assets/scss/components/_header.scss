@@ -193,7 +193,7 @@
             > a {
               &::before {
                 right: 20px;
-                top: 49%;
+                top: 51%;
               }
             }
           }
@@ -577,7 +577,7 @@
           margin-right: 22px;
         }
         &:is(.dropdown) > a::before {
-          color: #000;
+          color: #fff;
         }
 
         a {
@@ -587,12 +587,22 @@
         &:hover {
           > a {
             color: #000;
+
+            &::before {
+              color: #000;
+            }
           }
         }
 
         .dropdown-menu {
           border-color: #000;
           li {
+            margin-right: 0;
+
+            &:is(.dropdown) > a::before {
+              color: #000;
+            }
+
             a {
               color: #000;
             }
