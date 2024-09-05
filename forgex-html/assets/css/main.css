@@ -2212,6 +2212,12 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* 
     components-start
 */
+.fx-scn-redius {
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 16px;
+}
+
 /* 
     contact-list-start
 */
@@ -2552,21 +2558,35 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-color: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
-  overflow-y: scroll;
+  overflow: hidden;
   transform: translateX(105%);
   visibility: hidden;
   opacity: 1;
   transition: all 0.5s ease-in-out;
+  padding: 80px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .txa-offcanvas-box {
     right: 0px;
     top: 0px;
     height: 100vh;
   }
 }
-.txa-offcanvas-box::-webkit-scrollbar {
-  display: none;
+@media (max-width: 767px) {
+  .txa-offcanvas-box {
+    right: 0px;
+    top: 0px;
+    height: 100vh;
+    padding: 80px 20px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .txa-offcanvas-box {
+    right: 0px;
+    top: 0px;
+    height: 100vh;
+    padding: 80px 40px;
+  }
 }
 .txa-offcanvas-box-close {
   display: flex;
@@ -2599,22 +2619,15 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: #fff;
 }
 .txa-offcanvas-box-container {
-  padding: 80px;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
   gap: 50px;
+  overflow-y: scroll;
 }
-@media (max-width: 767px) {
-  .txa-offcanvas-box-container {
-    padding: 80px 20px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .txa-offcanvas-box-container {
-    padding: 80px 40px;
-  }
+.txa-offcanvas-box-container::-webkit-scrollbar {
+  display: none;
 }
 .txa-offcanvas-box .offcanvas-slideup {
   transform: translateY(100%);
@@ -3401,7 +3414,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   font-size: 12px;
   right: 0;
-  top: 49%;
+  top: 50%;
   color: var(--fx-clr-pr-1);
   transform: translateY(-50%);
   transition: 400ms var(--cube-1);
@@ -3691,6 +3704,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   background-repeat: no-repeat;
   padding: 0 20px;
   border-radius: 12px;
+  background-color: var(--fx-clr-pr-1);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .fx-header-3-main {
@@ -3850,6 +3864,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   clip-path: polygon(0 0, 100% 0, 100% 70%, 98% 100%, 2% 100%, 0 70%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 98% 100%, 2% 100%, 0 70%);
   z-index: -1;
+  background-color: var(--fx-clr-sd-3);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .fx-header-4-main::after {
@@ -3892,6 +3907,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   padding-top: 19px;
   padding-bottom: 19px;
   clip-path: polygon(0 0, 100% 0, 100% 69%, 93% 100%, 0 100%);
+  background-color: var(--fx-clr-pr-1);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .fx-header-4-action-link {
@@ -4013,6 +4029,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   z-index: -1;
   border-radius: 12px;
   background-position: left bottom;
+  background-color: #252525;
 }
 .fx-header-5-wrap .fx-header-2-top::after {
   display: none;
@@ -4039,6 +4056,9 @@ input:focus::placeholder, textarea:focus::placeholder {
   .fx-header-5-wrap .fx-header-2-main {
     padding-left: 20px;
   }
+}
+.fx-header-5-wrap .fx-header-2-top .fx-social-icon-btn:last-child {
+  border-right: none;
 }
 .fx-header-5-logo-box {
   flex: 0 0 auto;
@@ -4285,7 +4305,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   position: absolute;
   font-size: 12px;
   right: 0;
-  top: 49%;
+  top: 50%;
   color: var(--fx-clr-pr-2);
   transform: translateY(-50%);
   transition: 400ms var(--cube-1);
@@ -10841,7 +10861,7 @@ input:focus::placeholder, textarea:focus::placeholder {
 .breadcrumb-title {
   font-family: var(--fx-font-pr-1);
   font-size: 64px;
-  line-height: 0.9;
+  line-height: 0.95;
   letter-spacing: -2px;
   color: #fff;
   font-weight: 600;

@@ -16,20 +16,31 @@
     background-color: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
-    overflow-y: scroll;
+    overflow: hidden;
     transform: translateX(105%);
     visibility: hidden;
     opacity: 1;
     transition: all .5s ease-in-out;
+    padding: 80px;
 
-    @media #{$md,$xs} {
+    @media #{$md} {
       right: 0px;
       top: 0px;
       height: 100vh;
     }
 
-    &::-webkit-scrollbar {
-      display: none;
+    @media #{$xs} {
+      right: 0px;
+      top: 0px;
+      height: 100vh;
+      padding: 80px 20px;
+    }
+
+    @media #{$sm} {
+      right: 0px;
+      top: 0px;
+      height: 100vh;
+      padding: 80px 40px;
     }
 
 
@@ -66,20 +77,18 @@
     }
 
     &-container {
-      padding: 80px;
       display: flex;
       flex-direction: column;
       height: 100%;
       justify-content: space-between;
       gap: 50px;
+      overflow-y: scroll;
 
-      @media #{$xs} {
-        padding: 80px 20px;
+      &::-webkit-scrollbar {
+        display: none;
       }
+  
 
-      @media #{$sm} {
-        padding: 80px 40px;
-      }
     }
 
     .offcanvas-slideup {

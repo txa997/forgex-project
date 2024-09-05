@@ -1,6 +1,5 @@
 <svg width="323" height="80" viewBox="0 0 323 80" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M323 0H0V80H295L323 52V0Z" fill="#FC5220"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M323 0H0V80H295L323 52V0Z" fill="url(#pattern0_144_799)" fill-opacity="0.16"/>
+<path d="M0 0H323V80H0V0Z" fill="url(#pattern0_144_799)" fill-opacity="0.16"/>
 <defs>
 <pattern id="pattern0_144_799" patternContentUnits="objectBoundingBox" width="3.17028" height="12.8">
 <use xlink:href="#image0_144_799" transform="scale(0.00309598 0.0125)"/>
