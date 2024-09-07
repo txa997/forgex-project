@@ -14,6 +14,10 @@ const lenis = new Lenis({
 	duration: .5,	
 })
 
+gsap.config({
+	nullTargetWarn: false,
+});
+
 
 lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add((time) => {
@@ -728,10 +732,21 @@ if (window.innerWidth >= 992) {
 		display: "none"
 	}, "<=.5")
 
-
-	
-
 }
+
+// skill-progress
+var progress = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: progress,
+	  trigger: '[progress-trigger]',
+	  start: "top 90%",
+	  toggleActions: "play none none reverse",
+	  markers: false
+	}
+});
+	
+progress.from("[progress-trigger-item]" , { xPercent: -100 , duration: 1 })
 
 	
 // serve-1-slider
@@ -860,7 +875,7 @@ if($('.fx-core-1-active').length) {
 		slidesPerView: 1,
 
 		autoplay: {
-			delay: 4000,
+			delay: 400000000,
 		},
 
 		navigation: {
