@@ -1043,10 +1043,78 @@
     }
 }
 
+/* 
+    services-6-end
+*/
+
+/* 
+    services-7-start
+*/
+
+.fx-services-7-card {
+    height: 420px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+
+    &-content {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: #fff;
+        width: calc(100% - 20px);
+        border-radius: 4px 0 0 0;
+        display: flex;
+        justify-content: space-between;
+
+        .content {
+            padding: 5px 16px;
+        }
+
+        .card-subtitle {
+            font-size: 12px;
+            background: #08449C;
+            display: inline-block;
+            line-height: 1;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 400;
+            padding: 5px 10px;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 22px;
+            margin-bottom: 0;
+            text-transform: capitalize;
+            transition: all .3s var(--cube-1);
+
+            &:hover {
+                color: var(--fx-clr-pr-1);
+            }
+        }
+
+        .card-btn {
+            display: flex;
+            flex:  0 0 auto;
+            width: 56px;
+            justify-content: center;
+            align-items: center;
+            background: #EEEEEE;
+            font-size: 22px;
+            color: var(--fx-clr-pr-1);
+            transition: all .3s var(--cube-1);
+
+            &:hover {
+                background-color: var(--fx-clr-pr-1);
+                color: #fff;
+            }
+        }
+    }
+}
 
 
 /* 
-    services-6-end
+    services-7-end
 */
 
 /* 

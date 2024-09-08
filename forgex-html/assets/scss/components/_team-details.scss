@@ -1,0 +1,114 @@
+/* 
+    team-details-1-start
+*/
+.fx-team-details {
+    &-person {
+        padding-top: 250px;
+
+        &-row {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 64px;
+        }
+
+        &-img {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 15px;
+
+            .img-bg {
+                height: 540px;
+                width: 100%;
+                border-radius: 24px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+
+        &-social {
+            background: #fff;
+            border: 1px solid #EEEEEE;
+            display: inline-flex;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: -12px 12px 36px rgb(0 0 0 / 12%);
+        
+            a {
+                display: inline-flex;
+                width: 50px;
+                height: 50px;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                color: #000;
+                transition: all .3s var(--cube-1);
+
+                &:not(:last-child) {
+                    border-right: 1px solid #EEEEEE;
+                }
+        
+                &:hover {
+                    color: var(--fx-clr-pr-1);
+                }
+            }
+        }
+
+        &-info {
+            .person-bio {
+                font-size: 20px;
+                font-weight: 400;
+                color: var(--fx-clr-pr-1);
+                margin-bottom: 19px;
+            }
+
+            .person-name {
+                font-size: 40px;
+                line-height: 1.16;
+                margin-bottom: 16px;
+            }
+            .person-disc {
+                max-width: 584px;
+                margin-bottom: 29px;
+            }
+
+            .person-degi {
+                li {
+                    font-family: var(--fx-font-pr-1);
+                    text-transform: capitalize;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: rgb(0 0 0 / 72%);
+
+                    &:not(:last-child) {
+                        margin-bottom: 17px;
+                    }
+
+                    b {
+                        color: #000;
+                        font-weight: 500;
+                        display: inline-block;
+                        width: 20%;
+                    }
+                }
+            }
+
+            .info-subtitle {
+                font-size: 22px;
+                margin-bottom: 17px;
+            }
+            
+            
+        }
+    }
+
+
+    
+}
+
+
+/* 
+    team-details-1-end
+*/
