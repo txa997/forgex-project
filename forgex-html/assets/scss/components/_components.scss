@@ -383,6 +383,44 @@
     rating-start-1-end
 */
 
+
+
+.fx-pagination {
+    display: inline-flex;
+    gap: 9px;
+    flex-wrap: wrap;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        border: 2px solid #F6F6F6;
+        flex: 0 0 auto;
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+        color: #000;
+        font-weight: 400;
+        transition: all .3s var(--cube-1);
+
+        &:hover {
+            background: var(--fx-clr-pr-1);
+            color: #fff;
+            border-color: var(--fx-clr-pr-1);
+        }
+
+        &:is(.has-btn) {
+            &:hover {
+                border-color: var(--fx-clr-pr-1);
+                background: transparent;
+                color: var(--fx-clr-pr-1);
+            }
+        }
+    }
+}
+
+
 /* 
     components-end
 */
