@@ -1,0 +1,90 @@
+/* 
+    career-1-start
+*/
+.fx-career-img-slider {
+    &-single {
+        height: 512px;
+        border-radius: 8px;
+
+        @media #{$lg} {
+            height: 400px;
+        }
+
+        @media #{$md} {
+            height: 350px;
+        }
+
+        @media #{$xs} {
+            height: 300px;
+        }
+    }
+
+    &-btn {
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        justify-content: space-between;
+    }
+}
+
+.fx-career-benifit-1 {
+    &-scn-title {
+        max-width: 700px;
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 32px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &-single {
+            border: 1px solid #DBDBDB;
+            border-radius: 8px;
+            padding: 34px 36px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 34px 20px;
+            }
+            
+            .item-icon {
+                width: 52px;
+                margin-bottom: 24px;
+            }
+
+            .item-title {
+                font-size: 20px;
+                margin-bottom: 16px;
+            }
+
+            .item-disc {
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+        
+    }
+    
+}
+
+
+/* 
+    career-1-end
+*/

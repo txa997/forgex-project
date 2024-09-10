@@ -1224,6 +1224,25 @@ if($('.fx-s6-active').length) {
 	});
 }
 
+// career-img-slider
+if($('.fx-career-active').length) {
+	let slider = new Swiper('.fx-career-active', {
+		loop: true,
+		spaceBetween: 30,
+		speed: 500,
+
+		autoplay: {
+			delay: 4000,
+		},
+
+		navigation: {
+			nextEl: ".fx-career-slider-next",
+			prevEl: ".fx-career-slider-prev",
+		},
+
+	});
+}
+
 // project-7
 if($(".grid").length) {
 
