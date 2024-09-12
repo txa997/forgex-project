@@ -10,21 +10,37 @@
 
 
 // smoooth scroll activation start
-const lenis = new Lenis({
-	duration: .5,	
-})
 
 gsap.config({
 	nullTargetWarn: false,
 });
 
-
-lenis.on('scroll', ScrollTrigger.update);
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000)
-});
-gsap.ticker.lagSmoothing(0);
-
+const lenis = new Lenis({
+	duration: .9, 
+	easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+	direction: 'vertical', 
+	smooth: true, 
+	smoothTouch: true, 
+  });
+  
+  function raf(time) {
+	lenis.raf(time);
+	requestAnimationFrame(raf);
+  }
+  
+  requestAnimationFrame(raf);
+  $('a[href^="#"]').on('click', function (e) {
+	e.preventDefault(); 
+  
+	const target = $(this.getAttribute('href')); 
+  
+	if (target.length) {
+	  lenis.scrollTo(target[0], {
+		duration: 1.2, 
+		easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+	  });
+	}
+  });
 
 // preloader
 document.addEventListener("DOMContentLoaded", function () {
@@ -1319,6 +1335,7 @@ if($(".grid").length) {
 
 var mWrap = $(".fx-video-1");
 
+// Function to handle parallax effect
 function parallaxIt(e, target, movement = 1) {
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   var boundingRect = target[0].getBoundingClientRect();
@@ -1328,31 +1345,30 @@ function parallaxIt(e, target, movement = 1) {
   gsap.to(target.find("#magnetic-content"), {
     x: (relX - boundingRect.width / 2) * movement,
     y: (relY - boundingRect.height / 2 - scrollTop) * movement,
-    ease: "power1",
-    duration: 0.6
+    duration: 1,
+    ease: "power1.out",
   });
 }
 
-mWrap.hover(function () {
+// Event listener for parallax effect
+mWrap.each(function () {
+  var mContent = $(this).find("#magnetic-content");
   var mArea = $(this).find("#magnetic-area");
 
   mArea.on("mousemove", function (e) {
-    parallaxIt(e, mWrap);
+    parallaxIt(e, $(this).closest(".fx-video-1"));
+  });
+
+  mArea.on("mouseleave", function () {
+    gsap.to(mContent, {
+      scale: 1,
+      x: 0,
+      y: 0,
+      duration: 1,
+      ease: "power1.out",
+    });
   });
 });
-
-mWrap.find("#magnetic-area").on("mouseleave", function (e) {
-  gsap.to($(this).find("#magnetic-content"), {
-    scale: 1,
-    x: 0,
-    y: 0,
-    ease: "power1",
-    duration: 0.6
-  });
-});
-
-
-
 
 
 /*
