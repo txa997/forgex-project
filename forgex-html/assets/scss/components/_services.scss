@@ -1122,21 +1122,91 @@
 */
 .has-about-page {
     &:is(.fx-core-1-slider-item) {
-        .fx-core-1-slider-item-content {
-            margin-top: 120px;
-            align-self: self-start;
+        grid-template-columns: 1.5fr .5fr 1fr;
 
-            @media #{$md,$xs} {
-                margin-top: 0px;
+        @media #{$md,$xs} {
+            grid-template-columns:  1fr;
+        }
+
+        .fx-core-1-slider-item {
+            &-content {
+                margin-top: 115px;
+                align-self: self-start;
+    
+                @media #{$md,$xs} {
+                    margin-top: 0px;
+                }
+    
+                .title-wrap {
+                    margin-bottom: 0;
+                }
+    
+                .item-title {
+                    display: inline-block;
+                    font-size: 72px;
+                    background: #fff;
+                    line-height: 1.05;
+                    padding: 0 9px;
+                    letter-spacing: -2px;
+                    border-radius: 8px;
+                    padding-left: 0;
+                    
+                    &:not(:last-child) {
+                        margin-bottom: 8px;
+                    }
+
+                    @media #{$xl} {
+                        font-size: 70px;
+                    }
+
+                    @media #{$lg} {
+                        font-size: 60px;
+                    }
+
+                    @media #{$md} {
+                        font-size: 50px;
+                    }
+
+                    @media #{$xs} {
+                        font-size: 40px;
+                    }
+                }
+    
+    
+    
             }
 
-            .title-wrap {
-                margin-bottom: 0;
+            &-feature-single {
+                .item-title {
+                    font-size: 28px;
+                    margin-bottom: 7px;
+
+                    @media #{$xs} {
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            &-img {
+                margin-left: -326px;
+
+                @media #{$lg} {
+                    margin-left: -245px;
+                }
+
+                @media #{$md,$xs} {
+                    margin-left: 0px;
+                }
             }
         }
+
+
     }
 
     &:is(.fx-core-1-slider-btn) {
+        @media #{$md} {
+            top: 30%;
+        }
         @media #{$xs} {
             top: 30%;
         }
