@@ -748,7 +748,15 @@ var progress = gsap.timeline({
 	
 progress.from("[progress-trigger-item]" , { xPercent: -100 , duration: 1 })
 
-	
+// error
+gsap.from(".fx-error-content .img-1" ,
+	{
+		yPercent: -100,
+		delay: 1.5,
+	}
+);
+
+
 // serve-1-slider
 if($('.fx-serve-1-active').length) {
 	let slider = new Swiper('.fx-serve-1-active', {
@@ -1238,6 +1246,24 @@ if($('.fx-career-active').length) {
 		navigation: {
 			nextEl: ".fx-career-slider-next",
 			prevEl: ".fx-career-slider-prev",
+		},
+
+	});
+}
+
+// blog-img
+if($('.fx-blog-slide').length) {
+	let slider = new Swiper('.fx-blog-slide', {
+		loop: true,
+		spaceBetween: 0,
+		speed: 500,
+		autoplay: {
+			delay: 4000,
+		},
+
+		navigation: {
+			nextEl: ".blog_img_next",
+			prevEl: ".blog_img_prev",
 		},
 
 	});

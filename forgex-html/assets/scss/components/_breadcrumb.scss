@@ -90,6 +90,8 @@
             transform: translateY(100%);
             transition: all 1s var(--cube-1);
         }
+
+
     }
 
     &-title {
@@ -206,6 +208,17 @@
         }
     }
 
+
+}
+
+.breadcrumb-area {
+    &:is(.has-details) {
+        &:is(.has-blog-details) {
+            .breadcrumb-content {
+                max-width: 905px;
+            }
+        }
+    }
 }
 
 
