@@ -11,16 +11,12 @@
 
 // smoooth scroll activation start
 
-gsap.config({
-	nullTargetWarn: false,
-});
-
 const lenis = new Lenis({
 	duration: .9, 
 	easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
 	direction: 'vertical', 
 	smooth: true, 
-	smoothTouch: true, 
+	smoothTouch: false, 
   });
   
   function raf(time) {
@@ -429,8 +425,9 @@ function sideBox() {
 sideBox();
 
 
-
-
+gsap.config({
+	nullTargetWarn: false,
+});
 
 gsap.utils.toArray(".txxascale1").forEach(function(container) {
     let image = container.querySelector("img");
