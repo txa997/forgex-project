@@ -320,14 +320,38 @@
     &::after {
       position: absolute;
       content: "";
-      width: 100%;
+      width: 265px;
       height: 1px;
       background: rgb(255 255 255 / 24%) ;
       left: 100%;
       bottom: -.5px;
       z-index: 1;
 
-      // display: none;
+      @media only screen and (min-width: 1800px) and (max-width: 1919px) {
+        width: 212px;
+      }
+
+      @media #{$xxxl} {
+        width: 109px;
+      }
+
+      @media #{$xxl} {
+        width: 14px;
+      }
+
+
+      @media only screen and (min-width: 1301px) and (max-width: 1399px) {
+        width: 12px;
+      }
+
+      @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+        display: none;
+      }
+
+      @media #{$lg,$md,$xs} {
+        display: none;
+      }
+
     }
 
 
